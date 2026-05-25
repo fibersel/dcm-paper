@@ -1,0 +1,588 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{gettys2012}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=39e7a25fdfe5df6a002b946f4fdb305b}{%
+           family={Gettys},
+           familyi={G\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b7f8cd60f6e059c641e4f3379d92a2e7}{%
+           family={Nichols},
+           familyi={N\bibinitperiod},
+           given={Kathleen},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \strng{fullhash}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \strng{fullhashraw}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \strng{bibnamehash}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \strng{authorbibnamehash}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \strng{authornamehash}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \strng{authorfullhash}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \strng{authorfullhashraw}{fc56ad8df873ffd91f15d63dcfee4d36}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{1}
+      \field{title}{Bufferbloat: Dark Buffers in the Internet}
+      \field{volume}{55}
+      \field{year}{2012}
+      \field{pages}{57\bibrangedash 65}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1145/2063176.2063196
+      \endverb
+    \endentry
+    \entry{rfc8289}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=b7f8cd60f6e059c641e4f3379d92a2e7}{%
+           family={Nichols},
+           familyi={N\bibinitperiod},
+           given={Kathleen},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2191d887ae31ebf1ef43a77dc25834c4}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Van},
+           giveni={V\bibinitperiod}}}%
+        {{hash=7d529d3f9f778849a51ea6004c039ea8}{%
+           family={McGregor},
+           familyi={M\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4905b40bfc3c9ef595374b08ba668976}{%
+           family={Iyengar},
+           familyi={I\bibinitperiod},
+           given={Jana},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{b6f0f9a2a3f9575ac1eecced65300e2a}
+      \strng{fullhash}{b6f0f9a2a3f9575ac1eecced65300e2a}
+      \strng{fullhashraw}{b6f0f9a2a3f9575ac1eecced65300e2a}
+      \strng{bibnamehash}{b6f0f9a2a3f9575ac1eecced65300e2a}
+      \strng{authorbibnamehash}{b6f0f9a2a3f9575ac1eecced65300e2a}
+      \strng{authornamehash}{b6f0f9a2a3f9575ac1eecced65300e2a}
+      \strng{authorfullhash}{b6f0f9a2a3f9575ac1eecced65300e2a}
+      \strng{authorfullhashraw}{b6f0f9a2a3f9575ac1eecced65300e2a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{RFC 8289}
+      \field{title}{Controlled Delay Active Queue Management}
+      \field{year}{2018}
+    \endentry
+    \entry{rfc2309}{misc}{}{}
+      \name{author}{15}{}{%
+        {{hash=4fab16c18ca605d1584e30a9e6d9dbd9}{%
+           family={Braden},
+           familyi={B\bibinitperiod},
+           given={Bob},
+           giveni={B\bibinitperiod}}}%
+        {{hash=355a2475c7fc9d908d2f12f0736f0217}{%
+           family={Clark},
+           familyi={C\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=c277a690b3be7e183b85a00be4828510}{%
+           family={Crowcroft},
+           familyi={C\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5f3228bfd387c8171bdead5d42d2e59a}{%
+           family={Davie},
+           familyi={D\bibinitperiod},
+           given={Bruce},
+           giveni={B\bibinitperiod}}}%
+        {{hash=f9d65bffdf666c27571132aa727182d6}{%
+           family={Deering},
+           familyi={D\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod}}}%
+        {{hash=222e100454bced2fd8e9e786fce92f41}{%
+           family={Estrin},
+           familyi={E\bibinitperiod},
+           given={Deborah},
+           giveni={D\bibinitperiod}}}%
+        {{hash=bcb66fc187ba17e78c6c22747197aecf}{%
+           family={Floyd},
+           familyi={F\bibinitperiod},
+           given={Sally},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2191d887ae31ebf1ef43a77dc25834c4}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Van},
+           giveni={V\bibinitperiod}}}%
+        {{hash=b27c092575e333febdf8a3860c82458a}{%
+           family={Minshall},
+           familyi={M\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod}}}%
+        {{hash=ede03dad2d8d52e4d3a01e3fc1fe3ec3}{%
+           family={Partridge},
+           familyi={P\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3f3af29945f3176e9dd1a4ed829664ce}{%
+           family={Peterson},
+           familyi={P\bibinitperiod},
+           given={Larry},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7c6c08c52f1ffd02fc65a88adbee1e4f}{%
+           family={Ramakrishnan},
+           familyi={R\bibinitperiod},
+           given={K.\bibnamedelimi K.},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=8d2fd528d2484047352789c731e250a5}{%
+           family={Shenker},
+           familyi={S\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+        {{hash=b9230247c6f2f6191fbd9e350f432a7f}{%
+           family={Wroclawski},
+           familyi={W\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=cc2e36f00f725b723902ed63824d79e4}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Lixia},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{3a2b3d5bc49dd8ed2c30e134940da35a}
+      \strng{fullhash}{0491c14fb5940ef6acd33c171ed0ece8}
+      \strng{fullhashraw}{0491c14fb5940ef6acd33c171ed0ece8}
+      \strng{bibnamehash}{3a2b3d5bc49dd8ed2c30e134940da35a}
+      \strng{authorbibnamehash}{3a2b3d5bc49dd8ed2c30e134940da35a}
+      \strng{authornamehash}{3a2b3d5bc49dd8ed2c30e134940da35a}
+      \strng{authorfullhash}{0491c14fb5940ef6acd33c171ed0ece8}
+      \strng{authorfullhashraw}{0491c14fb5940ef6acd33c171ed0ece8}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{RFC 2309}
+      \field{title}{Recommendations on Queue Management and Congestion Avoidance in the Internet}
+      \field{year}{1998}
+    \endentry
+    \entry{nichols2012}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=b7f8cd60f6e059c641e4f3379d92a2e7}{%
+           family={Nichols},
+           familyi={N\bibinitperiod},
+           given={Kathleen},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2191d887ae31ebf1ef43a77dc25834c4}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Van},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{0d5eac32a5d08e8f9cb5cf6a01929104}
+      \strng{fullhash}{0d5eac32a5d08e8f9cb5cf6a01929104}
+      \strng{fullhashraw}{0d5eac32a5d08e8f9cb5cf6a01929104}
+      \strng{bibnamehash}{0d5eac32a5d08e8f9cb5cf6a01929104}
+      \strng{authorbibnamehash}{0d5eac32a5d08e8f9cb5cf6a01929104}
+      \strng{authornamehash}{0d5eac32a5d08e8f9cb5cf6a01929104}
+      \strng{authorfullhash}{0d5eac32a5d08e8f9cb5cf6a01929104}
+      \strng{authorfullhashraw}{0d5eac32a5d08e8f9cb5cf6a01929104}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM Queue}
+      \field{number}{5}
+      \field{title}{Controlling Queue Delay}
+      \field{volume}{10}
+      \field{year}{2012}
+      \field{pages}{20\bibrangedash 34}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1145/2209249.2209264
+      \endverb
+    \endentry
+    \entry{pan2013}{inproceedings}{}{}
+      \name{author}{7}{}{%
+        {{hash=3acacc1f684ef378918a00ece495d31b}{%
+           family={Pan},
+           familyi={P\bibinitperiod},
+           given={Rong},
+           giveni={R\bibinitperiod}}}%
+        {{hash=069ec9757f8a8b23c96dccff820e26ef}{%
+           family={Natarajan},
+           familyi={N\bibinitperiod},
+           given={Preethi},
+           giveni={P\bibinitperiod}}}%
+        {{hash=dc056953641297baf8f9e8ab82f308b6}{%
+           family={Piglione},
+           familyi={P\bibinitperiod},
+           given={Chiara},
+           giveni={C\bibinitperiod}}}%
+        {{hash=5541fefa37b76c5431a47cff8c81056e}{%
+           family={Prabhu},
+           familyi={P\bibinitperiod},
+           given={Mythili\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=c7abcfabb7fdd10d5973c622a926865e}{%
+           family={Subber},
+           familyi={S\bibinitperiod},
+           given={Vijay},
+           giveni={V\bibinitperiod}}}%
+        {{hash=efd7ff6e2ea260491d3aa8ece1524558}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={Fiyaz},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b053ba8d9371ed6e15f69a141a45de0a}{%
+           family={Athiappan},
+           familyi={A\bibinitperiod},
+           given={Karthik},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{d9249ceaf8719f252c767ef2360209a0}
+      \strng{fullhash}{d9249ceaf8719f252c767ef2360209a0}
+      \strng{fullhashraw}{d9249ceaf8719f252c767ef2360209a0}
+      \strng{bibnamehash}{d9249ceaf8719f252c767ef2360209a0}
+      \strng{authorbibnamehash}{d9249ceaf8719f252c767ef2360209a0}
+      \strng{authornamehash}{d9249ceaf8719f252c767ef2360209a0}
+      \strng{authorfullhash}{d9249ceaf8719f252c767ef2360209a0}
+      \strng{authorfullhashraw}{d9249ceaf8719f252c767ef2360209a0}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of IEEE International Conference on High Performance Switching and Routing (HPSR)}
+      \field{title}{{PIE}: A Lightweight Control Scheme to Address the Bufferbloat Problem}
+      \field{year}{2013}
+      \field{pages}{148\bibrangedash 155}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/HPSR.2013.6602305
+      \endverb
+    \endentry
+    \entry{floyd1993}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=bcb66fc187ba17e78c6c22747197aecf}{%
+           family={Floyd},
+           familyi={F\bibinitperiod},
+           given={Sally},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2191d887ae31ebf1ef43a77dc25834c4}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Van},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{e797d8bbb855a3bef0488897f68c9d65}
+      \strng{fullhash}{e797d8bbb855a3bef0488897f68c9d65}
+      \strng{fullhashraw}{e797d8bbb855a3bef0488897f68c9d65}
+      \strng{bibnamehash}{e797d8bbb855a3bef0488897f68c9d65}
+      \strng{authorbibnamehash}{e797d8bbb855a3bef0488897f68c9d65}
+      \strng{authornamehash}{e797d8bbb855a3bef0488897f68c9d65}
+      \strng{authorfullhash}{e797d8bbb855a3bef0488897f68c9d65}
+      \strng{authorfullhashraw}{e797d8bbb855a3bef0488897f68c9d65}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE/ACM Transactions on Networking}
+      \field{number}{4}
+      \field{title}{Random Early Detection Gateways for Congestion Avoidance}
+      \field{volume}{1}
+      \field{year}{1993}
+      \field{pages}{397\bibrangedash 413}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1109/90.251892
+      \endverb
+    \endentry
+    \entry{christiansen2001}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=d71368ae7c56d067a0cdaadd7cb41470}{%
+           family={Christiansen},
+           familyi={C\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d3e97d9a5e52f2c27f0c1f510c4b7783}{%
+           family={Jeffay},
+           familyi={J\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=a47d8e4c02a365fa78d41badcad9a282}{%
+           family={Ott},
+           familyi={O\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=3e16805154388a545f435a41ed00db8b}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={F.\bibnamedelimi Donelson},
+           giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{ffc620bfefe9a2a129527e5319a6c2a7}
+      \strng{fullhash}{ffc620bfefe9a2a129527e5319a6c2a7}
+      \strng{fullhashraw}{ffc620bfefe9a2a129527e5319a6c2a7}
+      \strng{bibnamehash}{ffc620bfefe9a2a129527e5319a6c2a7}
+      \strng{authorbibnamehash}{ffc620bfefe9a2a129527e5319a6c2a7}
+      \strng{authornamehash}{ffc620bfefe9a2a129527e5319a6c2a7}
+      \strng{authorfullhash}{ffc620bfefe9a2a129527e5319a6c2a7}
+      \strng{authorfullhashraw}{ffc620bfefe9a2a129527e5319a6c2a7}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE/ACM Transactions on Networking}
+      \field{number}{3}
+      \field{title}{Tuning {RED} for Web Traffic}
+      \field{volume}{9}
+      \field{year}{2001}
+      \field{pages}{249\bibrangedash 264}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1109/90.929849
+      \endverb
+    \endentry
+    \entry{floyd2001}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=bcb66fc187ba17e78c6c22747197aecf}{%
+           family={Floyd},
+           familyi={F\bibinitperiod},
+           given={Sally},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c8a2ca98903d293782c28d9371d99adc}{%
+           family={Gummadi},
+           familyi={G\bibinitperiod},
+           given={Ramakrishna},
+           giveni={R\bibinitperiod}}}%
+        {{hash=8d2fd528d2484047352789c731e250a5}{%
+           family={Shenker},
+           familyi={S\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {ICSI}%
+      }
+      \strng{namehash}{d6f785e2c8738ab252b9377220242989}
+      \strng{fullhash}{d6f785e2c8738ab252b9377220242989}
+      \strng{fullhashraw}{d6f785e2c8738ab252b9377220242989}
+      \strng{bibnamehash}{d6f785e2c8738ab252b9377220242989}
+      \strng{authorbibnamehash}{d6f785e2c8738ab252b9377220242989}
+      \strng{authornamehash}{d6f785e2c8738ab252b9377220242989}
+      \strng{authorfullhash}{d6f785e2c8738ab252b9377220242989}
+      \strng{authorfullhashraw}{d6f785e2c8738ab252b9377220242989}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Adaptive {RED}: An Algorithm for Increasing the Robustness of {RED}'s Active Queue Management}
+      \field{type}{techreport}
+      \field{year}{2001}
+    \endentry
+    \entry{floyd2000}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=bcb66fc187ba17e78c6c22747197aecf}{%
+           family={Floyd},
+           familyi={F\bibinitperiod},
+           given={Sally},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{bcb66fc187ba17e78c6c22747197aecf}
+      \strng{fullhash}{bcb66fc187ba17e78c6c22747197aecf}
+      \strng{fullhashraw}{bcb66fc187ba17e78c6c22747197aecf}
+      \strng{bibnamehash}{bcb66fc187ba17e78c6c22747197aecf}
+      \strng{authorbibnamehash}{bcb66fc187ba17e78c6c22747197aecf}
+      \strng{authornamehash}{bcb66fc187ba17e78c6c22747197aecf}
+      \strng{authorfullhash}{bcb66fc187ba17e78c6c22747197aecf}
+      \strng{authorfullhashraw}{bcb66fc187ba17e78c6c22747197aecf}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Recommendation on using the ``gentle'' variant of {RED}}
+      \field{year}{2000}
+      \verb{urlraw}
+      \verb https://www.icir.org/floyd/red/gentle.html
+      \endverb
+      \verb{url}
+      \verb https://www.icir.org/floyd/red/gentle.html
+      \endverb
+    \endentry
+    \entry{korolkova2010}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=2374bdcce3835058e1015db090a89477}{%
+           family={Korolkova},
+           familyi={K\bibinitperiod},
+           given={Anna\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Moscow}%
+      }
+      \list{publisher}{1}{%
+        {RUDN University}%
+      }
+      \strng{namehash}{2374bdcce3835058e1015db090a89477}
+      \strng{fullhash}{2374bdcce3835058e1015db090a89477}
+      \strng{fullhashraw}{2374bdcce3835058e1015db090a89477}
+      \strng{bibnamehash}{2374bdcce3835058e1015db090a89477}
+      \strng{authorbibnamehash}{2374bdcce3835058e1015db090a89477}
+      \strng{authornamehash}{2374bdcce3835058e1015db090a89477}
+      \strng{authorfullhash}{2374bdcce3835058e1015db090a89477}
+      \strng{authorfullhashraw}{2374bdcce3835058e1015db090a89477}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mathematical Model of Traffic Transmission with Dynamic Flow Intensity Regulated by a {RED}-type Algorithm: PhD Thesis}
+      \field{year}{2010}
+    \endentry
+    \entry{velieva2019}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=359df723c056dcfeaa5beef42fd72af7}{%
+           family={Velieva},
+           familyi={V\bibinitperiod},
+           given={Tatiana\bibnamedelima R.},
+           giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Moscow}%
+      }
+      \list{publisher}{1}{%
+        {RUDN University}%
+      }
+      \strng{namehash}{359df723c056dcfeaa5beef42fd72af7}
+      \strng{fullhash}{359df723c056dcfeaa5beef42fd72af7}
+      \strng{fullhashraw}{359df723c056dcfeaa5beef42fd72af7}
+      \strng{bibnamehash}{359df723c056dcfeaa5beef42fd72af7}
+      \strng{authorbibnamehash}{359df723c056dcfeaa5beef42fd72af7}
+      \strng{authornamehash}{359df723c056dcfeaa5beef42fd72af7}
+      \strng{authorfullhash}{359df723c056dcfeaa5beef42fd72af7}
+      \strng{authorfullhashraw}{359df723c056dcfeaa5beef42fd72af7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Analysis of Self-Oscillation Modes in Continuous-Discrete Dynamical Models: PhD Thesis}
+      \field{year}{2019}
+    \endentry
+    \entry{feng2002}{report}{}{}
+      \name{author}{4}{}{%
+        {{hash=76a395df65ed7a9b9ae0c17b74d6b653}{%
+           family={Feng},
+           familyi={F\bibinitperiod},
+           given={Wu-chang},
+           giveni={W\bibinithyphendelim c\bibinitperiod}}}%
+        {{hash=0d00a459caba6ea5e8ba9238cfa42ecf}{%
+           family={Kandlur},
+           familyi={K\bibinitperiod},
+           given={Dilip\bibnamedelima D.},
+           giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=a777bd8251c6643c3c38ceed5ad8d4e6}{%
+           family={Saha},
+           familyi={S\bibinitperiod},
+           given={Debanjan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=163411def426f522803d5a27828d3b8d}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Kang\bibnamedelima G.},
+           giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Michigan}%
+      }
+      \strng{namehash}{3798946cc2042ef16c914842a7162c8e}
+      \strng{fullhash}{3798946cc2042ef16c914842a7162c8e}
+      \strng{fullhashraw}{3798946cc2042ef16c914842a7162c8e}
+      \strng{bibnamehash}{3798946cc2042ef16c914842a7162c8e}
+      \strng{authorbibnamehash}{3798946cc2042ef16c914842a7162c8e}
+      \strng{authornamehash}{3798946cc2042ef16c914842a7162c8e}
+      \strng{authorfullhash}{3798946cc2042ef16c914842a7162c8e}
+      \strng{authorfullhashraw}{3798946cc2042ef16c914842a7162c8e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{CSE-TR-387-99}
+      \field{title}{{BLUE}: A New Class of Active Queue Management Algorithms}
+      \field{type}{techreport}
+      \field{year}{2002}
+    \endentry
+    \entry{hollot2001}{inproceedings}{}{}
+      \name{author}{4}{}{%
+        {{hash=41cd7add9c2d6fa87b9ce8d1772edc4f}{%
+           family={Hollot},
+           familyi={H\bibinitperiod},
+           given={C.\bibnamedelimi V.},
+           giveni={C\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=40925a6fd0da79c354b086bcce01cd61}{%
+           family={Misra},
+           familyi={M\bibinitperiod},
+           given={Vishal},
+           giveni={V\bibinitperiod}}}%
+        {{hash=1d2c1f6da31d33c4edb21c7e2d0fc18e}{%
+           family={Towsley},
+           familyi={T\bibinitperiod},
+           given={Donald},
+           giveni={D\bibinitperiod}}}%
+        {{hash=cb73de6f692658afadd2300c582c7dcc}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Wei-Bo},
+           giveni={W\bibinithyphendelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{71972e31f8c5a5214ad9eda62af99acb}
+      \strng{fullhash}{71972e31f8c5a5214ad9eda62af99acb}
+      \strng{fullhashraw}{71972e31f8c5a5214ad9eda62af99acb}
+      \strng{bibnamehash}{71972e31f8c5a5214ad9eda62af99acb}
+      \strng{authorbibnamehash}{71972e31f8c5a5214ad9eda62af99acb}
+      \strng{authornamehash}{71972e31f8c5a5214ad9eda62af99acb}
+      \strng{authorfullhash}{71972e31f8c5a5214ad9eda62af99acb}
+      \strng{authorfullhashraw}{71972e31f8c5a5214ad9eda62af99acb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of IEEE INFOCOM}
+      \field{title}{On Designing Improved Controllers for {AQM} Routers Supporting {TCP} Flows}
+      \field{year}{2001}
+      \field{pages}{1726\bibrangedash 1734}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/INFCOM.2001.916670
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

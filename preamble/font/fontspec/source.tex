@@ -1,0 +1,20 @@
+%% TeX Gyre fonts (available in TeX Live)
+
+\setmainfont[Ligatures={Common,TeX}]{TeX Gyre Termes}
+\setromanfont[Ligatures={Common,TeX}]{TeX Gyre Termes}
+\setsansfont[Ligatures={Common,TeX},Scale=MatchLowercase]{TeX Gyre Heros}
+\setmonofont[Scale=MatchLowercase]{TeX Gyre Cursor}
+
+\makeatletter
+\AtBeginDocument{%
+  \@ifpackageloaded{unicode-math}{%
+    \setmathfont{TeX Gyre Termes Math}
+  }{%
+  }
+}
+\makeatother
+
+%%% Local Variables:
+%%% mode: latex
+%%% coding: utf-8-unix
+%%% End:

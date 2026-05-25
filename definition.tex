@@ -1,0 +1,57 @@
+% looks for pdfTEX in pdf mode
+\IfFileExists{ifpdf.sty}{\usepackage{ifpdf}}{}
+\IfFileExists{ifxetex.sty}{\usepackage{ifxetex}}{}
+\IfFileExists{ifluatex.sty}{\usepackage{ifluatex}}{}
+
+\usepackage{xifthen}
+
+\ifthenelse{\boolean{luatex}}
+    {\input preamble/lualatex}
+%else
+{\ifthenelse{\boolean{xetex}}
+    {\input preamble/xelatex}
+    %else
+    {
+        \input preamble/latex
+        \ifpdf
+            \input preamble/pdflatex
+        \fi
+    }
+}
+
+\input{preamble/pkg/biblatex/style/nature}
+
+\addbibresource{cite.bib}
+
+%% Расширенная математика
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amscd}
+
+\usepackage{mathtools}
+\mathtoolsset{
+showonlyrefs=true,
+mathic=true,
+}
+
+\allowdisplaybreaks
+
+%% Работа с графикой
+
+\usepackage{graphicx}
+
+%% local definitions
+
+\usepackage{url}
+
+\usepackage{pgf}
+\usepackage{booktabs}
+\usepackage{float}
+
+\def\No{\protect\textnumero}
+
+\graphicspath{{image/}{./}}
+\titlelogo{image/logo.pdf}
+\usepackage{subfiles}
+\sloppy
