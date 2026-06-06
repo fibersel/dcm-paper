@@ -193,6 +193,113 @@ In the zone $[\mathrm{max}_{\mathrm{Th}},\, 2\cdot\mathrm{max}_{\mathrm{Th}})$ t
 \section{Methods}
 \label{sec:methods}
 
+\subsection{Simulation environment}
+
+\subsubsection{Discrete-event network simulation}
+
+The study of network protocols and congestion control mechanisms can be conducted using three principal methodologies: analytical modeling, physical experimentation on real hardware, and simulation. Analytical models (such as the fluid models of TCP/RED interaction used by Korolkova~\cite{korolkova2010} and Velieva~\cite{velieva2019}) provide closed-form insights into system stability but require significant simplifying assumptions that limit their applicability to complex multi-flow scenarios. Physical testbeds provide maximum realism but suffer from poor reproducibility, high cost, and limited scalability. \textit{Simulation}---and specifically \textit{discrete-event simulation} (DES)---occupies the middle ground: it models the behavior of each individual packet traversing the network at a chosen level of abstraction while maintaining full control over experimental conditions.
+
+In discrete-event simulation, the simulator does not advance time in fixed increments. Instead, it maintains a priority queue of future events (packet arrivals, timer expirations, state transitions), each tagged with its scheduled virtual time. The simulation engine processes events in chronological order: it dequeues the earliest event, advances the simulation clock to that event's time, executes the associated callback (which may schedule new events), and repeats. Between events, no computation occurs---the simulation clock ``jumps'' directly to the next event. This event-driven approach provides several critical properties for network research:
+\begin{itemize}
+  \item \textbf{Exact reproducibility.} Given identical initial conditions, random seeds, and parameters, the simulation produces bitwise-identical results on any platform---a prerequisite for controlled comparative studies.
+  \item \textbf{Arbitrary instrumentation.} Any internal state variable (instantaneous queue length, EWMA average, TCP congestion window, drop probability) can be sampled at any point in simulated time without introducing probe traffic or measurement overhead that would perturb the system.
+  \item \textbf{Time compression.} A 60-second simulation of a network with dozens of nodes completes in seconds of wall-clock time, enabling systematic parameter sweeps that would require days on physical hardware.
+  \item \textbf{Perfect isolation.} Unlike emulation or physical experiments, simulation results are unaffected by host OS scheduling jitter, hardware variability, or background traffic.
+\end{itemize}
+
+\subsubsection{The ns-3 simulator}
+
+For conducting the experiments in this work, the discrete-event network simulator \textbf{ns-3} (Network Simulator~3) version~3.41 was used~\cite{ns3}. ns-3 is an open-source simulation platform designed for research and education in the field of computer networks. It is developed and maintained by an international consortium of universities and research laboratories, distributed under the GNU~GPLv2 license, and has been cited in thousands of peer-reviewed publications since its first release in 2008.
+
+ns-3 is implemented entirely in C++ with optional Python bindings for scripting convenience. The simulator is organized into a set of \textit{modules}, each implementing a specific protocol layer or network technology:
+\begin{itemize}
+  \item \texttt{internet}---IPv4/IPv6 stacks, TCP (NewReno, Cubic, BBR), UDP, ARP, routing;
+  \item \texttt{traffic-control}---queue disciplines including \texttt{RedQueueDisc} (RED, ARED, Gentle~RED), CoDel, PIE, FQ-CoDel;
+  \item \texttt{point-to-point}, \texttt{csma}, \texttt{wifi}, \texttt{lte}---link-layer and physical-layer models;
+  \item \texttt{applications}---traffic generators (BulkSend, OnOff, PacketSink) and application-layer protocols.
+\end{itemize}
+
+The \texttt{RedQueueDisc} module, used in this work, implements all three algorithms of the RED family within a single class controlled by configuration attributes: \texttt{ARED} (boolean flag enabling adaptive maxP), \texttt{Gentle} (boolean flag enabling the gentle mode with extended probability zone), and standard threshold parameters (\texttt{MinTh}, \texttt{MaxTh}, \texttt{MaxSize}, \texttt{QW}). This unified implementation guarantees that algorithm comparison is not confounded by differences in code quality, timer resolution, or packet processing paths.
+
+Key reasons for choosing ns-3 in this work:
+\begin{itemize}
+  \item \textbf{Protocol fidelity.} The TCP implementation in ns-3 models the full state machine (slow start, congestion avoidance, fast retransmit, fast recovery) with segment-level granularity, matching the behavior of real kernel stacks.
+  \item \textbf{Native AQM support.} All three RED variants are available as standard modules with validated implementations referenced in the ns-3 documentation and regression test suite.
+  \item \textbf{Scalability.} Simulating tens of nodes and hundreds of flows is feasible on a single workstation; the event-driven core consumes memory proportional to the number of active events, not simulated time.
+  \item \textbf{Tracing framework.} ns-3 provides a hierarchical tracing system that allows attaching callbacks to any state change (enqueue, dequeue, drop, congestion window update) without modifying simulator source code.
+  \item \textbf{Active development.} ns-3 receives regular releases (3--4 per year), maintains backwards compatibility of simulation APIs, and has extensive documentation including a tutorial, manual, and model library reference.
+\end{itemize}
+
+\subsubsection{Comparison with ns-2 and other simulation tools}
+
+\textbf{ns-2} (Network Simulator~2) is the predecessor of ns-3 and was the dominant network simulation tool from the mid-1990s through the 2000s. While ns-3 inherits the research mission of ns-2, it is a complete rewrite with a fundamentally different architecture. Table~\ref{tab:ns2-vs-ns3} summarizes the key differences.
+
+\begin{table}[H]
+\centering
+\caption{Architectural comparison of ns-2 and ns-3}
+\label{tab:ns2-vs-ns3}
+\begin{tabular}{lll}
+\toprule
+Aspect & ns-2 & ns-3 \\
+\midrule
+Language & C++ core + OTcl scripting & C++ throughout (Python optional) \\
+Architecture & Split object model (C++/OTcl) & Unified object model \\
+IP model & Abstract addressing & Real IP stack (BSD-like) \\
+Packet format & Simulated headers & Serialized byte buffers \\
+Emulation & Limited & Real-time scheduler, tap bridges \\
+Maintenance & Frozen (last release 2011) & Active (latest release 2024) \\
+Validation & Community scripts & Regression test suite per module \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The split-object architecture of ns-2 required researchers to maintain parallel class hierarchies in C++ and OTcl, leading to steep learning curves and frequent synchronization bugs between the two layers. ns-3 eliminates this duality: simulation scripts are written in the same C++ (or Python) that implements the models. Furthermore, ns-2 used abstract 32-bit node addresses and simplified packet headers, while ns-3 models real IPv4/IPv6 headers with proper checksums and fragmentation---enabling direct validation against packet captures from physical networks.
+
+A critical practical consideration is that ns-2 has not received official updates since 2011 and its RED implementation lacks the ARED adaptive mechanism as a standard module. In ns-3, all three algorithms are maintained, tested, and documented within the \texttt{traffic-control} module.
+
+\textbf{Other simulation and emulation environments:}
+\begin{itemize}
+  \item \textit{OMNeT++}~\cite{omnetpp} is a modular discrete-event simulation framework. Network protocols are provided by the separate INET library. OMNeT++ uses NED (Network Description) language for topology specification and has a graphical IDE. While powerful, it requires learning an additional domain-specific language and the INET RED implementation is less extensively validated than ns-3's.
+  \item \textit{GNS3} and \textit{Mininet} are network \textit{emulators} rather than simulators: they run real protocol implementations (Linux kernel network stack, actual router firmware images) in virtualized or containerized environments. Emulators provide maximum protocol realism but sacrifice reproducibility (results depend on host CPU scheduling, memory pressure, and I/O latency) and scalability (each node requires real OS resources).
+  \item \textit{OPNET Modeler} (now Riverbed Modeler) is a commercial discrete-event simulator with a graphical drag-and-drop interface, widely used in industry for network planning. Its proprietary license and closed-source nature limit its use in academic reproducibility contexts.
+\end{itemize}
+
+Table~\ref{tab:sim-comparison} provides a summary comparison of simulation tools across dimensions relevant to this work.
+
+\begin{table}[H]
+\centering
+\caption{Comparison of network simulation/emulation environments}
+\label{tab:sim-comparison}
+\begin{tabular}{lccccc}
+\toprule
+Property & ns-3 & ns-2 & OMNeT++ & Mininet & OPNET \\
+\midrule
+Type & DES & DES & DES & Emulation & DES \\
+License & GPLv2 & GPLv2 & Academic/Comm. & BSD & Commercial \\
+RED family support & Full & Partial & INET & Kernel & Yes \\
+Reproducibility & Exact & Exact & Exact & Approximate & Exact \\
+Active development & Yes & No & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsubsection{Installation and setup}
+
+ns-3 is distributed as source code and can be built on Linux (Ubuntu, Fedora, CentOS) and macOS. The build system requires a C++17-compatible compiler (GCC~$\ge$~9 or Clang~$\ge$~11), CMake~$\ge$~3.13, and Python~3. The minimal installation procedure is:
+\begin{verbatim}
+git clone https://gitlab.com/nsnam/ns-3-dev.git ns-3.41
+cd ns-3.41
+./ns3 configure --enable-examples --enable-tests
+./ns3 build
+\end{verbatim}
+
+The \texttt{./ns3 configure} step detects available optional dependencies (GTK for visualization, SQLite for statistics, MPI for distributed simulation) and generates the build system. The \texttt{./ns3 build} step compiles all enabled modules into shared libraries. After building, simulation scripts are placed in the \texttt{scratch/} directory and executed via:
+\begin{verbatim}
+./ns3 run "scratch/<script-name> [--command-line-arguments]"
+\end{verbatim}
+
+For this work, a dedicated subdirectory \texttt{scratch/red-experiments/} was created containing the simulation source code, configuration files, and analysis scripts.
+
 \subsection{Experimental topology}
 
 The experiment uses a dumbbell topology: multiple senders are connected to a common router through fast links, and the router is connected to a single receiver through a narrow bottleneck link with limited bandwidth. The narrow link is the only possible congestion point, and the AQM queue discipline is installed on its outgoing interface.
@@ -294,6 +401,126 @@ For plotting, the script \texttt{vis.py} with moving average smoothing (window o
 \begin{verbatim}
 python vis.py --algorithms red ared gentle --window 30
 \end{verbatim}
+
+\subsection{Simulation script structure}
+
+To illustrate the experimental setup, Listings~\ref{lst:topology}--\ref{lst:tracing} present simplified pseudocode of the main simulation stages.
+
+\begin{figure}[H]
+\begin{lstlisting}[
+  language=C++,
+  morekeywords={NodeContainer,PointToPointHelper,InternetStackHelper,
+    TrafficControlHelper,RedQueueDisc,Config,SetAttribute}
+]
+// 1. Create network nodes
+NodeContainer senders(10), router(1), receiver(1);
+
+// 2. Configure access links (sender -> router)
+PointToPointHelper accessLink;
+accessLink.SetRate("1Mbps");
+accessLink.SetDelay("2ms");
+for (int i = 0; i < 10; i++)
+    accessLink.Install(senders[i], router);
+
+// 3. Configure bottleneck link (router -> receiver)
+PointToPointHelper bottleneck;
+bottleneck.SetRate("2Mbps");
+bottleneck.SetDelay("10ms");
+bottleneck.Install(router, receiver);
+
+// 4. Install IP stack on all nodes
+InternetStackHelper stack;
+stack.InstallAll();
+
+// 5. Install AQM queue discipline on bottleneck
+TrafficControlHelper tch;
+tch.SetRootQueueDisc("ns3::RedQueueDisc",
+    "MinTh",    DoubleValue(5),
+    "MaxTh",    DoubleValue(10),
+    "MaxSize",  QueueSizeValue("100p"),
+    "ARED",     BooleanValue(aredFlag),
+    "Gentle",   BooleanValue(gentleFlag));
+tch.Install(bottleneckDevice);
+\end{lstlisting}
+\caption{Topology construction and AQM installation (pseudocode)}
+\label{lst:topology}
+\end{figure}
+
+\begin{figure}[H]
+\begin{lstlisting}[
+  language=C++,
+  morekeywords={BulkSendHelper,PacketSinkHelper,ApplicationContainer,
+    InetSocketAddress,Seconds}
+]
+// 6. Install TCP BulkSend on each sender
+BulkSendHelper bulkSend("ns3::TcpSocketFactory",
+    InetSocketAddress(receiverAddr, port));
+bulkSend.SetAttribute("SendSize", UintegerValue(512));
+bulkSend.SetAttribute("MaxBytes", UintegerValue(0)); // unlimited
+
+ApplicationContainer senderApps;
+for (int i = 0; i < 10; i++)
+    senderApps.Add(bulkSend.Install(senders[i]));
+
+// 7. Install PacketSink on receiver
+PacketSinkHelper sink("ns3::TcpSocketFactory",
+    InetSocketAddress(Ipv4Address::GetAny(), port));
+sink.Install(receiver);
+
+// 8. Schedule start/stop
+senderApps.Start(Seconds(0.0));
+senderApps.Stop(Seconds(60.0));
+\end{lstlisting}
+\caption{Traffic generation setup (pseudocode)}
+\label{lst:traffic}
+\end{figure}
+
+\begin{figure}[H]
+\begin{lstlisting}[
+  language=C++,
+  morekeywords={Simulator,Callback,QueueDisc,Ptr,ofstream,Seconds,
+    ScheduleEvery}
+]
+// 9. Queue length sampling (every 100 ms)
+void SampleQueue(Ptr<QueueDisc> qdisc, ofstream& out) {
+    double t = Simulator::Now().GetSeconds();
+    uint32_t qLen = qdisc->GetCurrentSize().GetValue();
+    out << t << "," << qLen << "\n";
+}
+ScheduleEvery(Seconds(0.1), &SampleQueue, redQueue, queueFile);
+
+// 10. Drop event tracing
+void OnDrop(ofstream& out, Ptr<const QueueDiscItem> item) {
+    out << Simulator::Now().GetSeconds() << "\n";
+}
+redQueue->TraceConnectWithoutContext("Drop",
+    MakeBoundCallback(&OnDrop, dropFile));
+
+// 11. Throughput sampling (every 100 ms)
+void SampleThroughput(Ptr<PacketSink> sink, ofstream& out,
+                      uint64_t& prevBytes) {
+    uint64_t curr = sink->GetTotalRx();
+    double tput = (curr - prevBytes) * 8.0 / 0.1; // bits/s
+    out << Simulator::Now().GetSeconds() << "," << tput << "\n";
+    prevBytes = curr;
+}
+ScheduleEvery(Seconds(0.1), &SampleThroughput, sink, tputFile,
+              prevBytes);
+
+// 12. Run simulation
+Simulator::Stop(Seconds(60.0));
+Simulator::Run();
+Simulator::Destroy();
+\end{lstlisting}
+\caption{Trace callbacks for metric collection (pseudocode)}
+\label{lst:tracing}
+\end{figure}
+
+Figure~\ref{lst:topology} demonstrates the key step distinguishing the three experiments: the \texttt{ARED} and \texttt{Gentle} boolean flags passed to \texttt{RedQueueDisc}. When both are \texttt{false}, standard RED is used; setting \texttt{ARED=true} enables adaptive maxP; setting \texttt{Gentle=true} enables the extended probability zone. All other parameters (thresholds, topology, traffic pattern) remain identical across runs.
+
+Figure~\ref{lst:traffic} shows the traffic generation pattern: ten BulkSend applications, each sending an unlimited stream of 512-byte segments over TCP, creating sustained congestion at the bottleneck.
+
+Figure~\ref{lst:tracing} illustrates the instrumentation approach: ns-3's tracing framework allows attaching callbacks to queue state changes and scheduling periodic sampling without modifying the protocol implementation code. The three output CSV files are produced by these callbacks.
 
 \subsection{Evaluation metrics}
 
@@ -495,6 +722,10 @@ The obtained results confirm that AQM algorithm selection is determined by speci
   \item When \textbf{minimum drop count} is priority---ARED (19\% fewer drops than RED).
   \item When \textbf{predictable throughput} is priority---RED (lowest CV 18.7\%).
 \end{itemize}
+
+\section*{Code availability}
+
+The simulation source code and analysis scripts are publicly available at: \url{https://github.com/fibersel/dcm-paper}.
 
 \printbibliography
 

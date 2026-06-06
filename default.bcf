@@ -2404,6 +2404,10 @@
     <bcf:citekey order="23" intorder="1">floyd1993</bcf:citekey>
     <bcf:citekey order="24" intorder="1">floyd2001</bcf:citekey>
     <bcf:citekey order="25" intorder="1">floyd2000</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">korolkova2010</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">velieva2019</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">ns3</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">omnetpp</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.3.6)  25 MAY 2026 23:19
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.3.6)  6 JUN 2026 19:02
  restricted system commands enabled.
 **default
 (./default.tex
@@ -2079,7 +2079,41 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count538
 \@lastruleclass=\count539
 \@thisrulewidth=\dimen314
-) (/usr/local/texlive/2026/texmf-dist/tex/latex/subfiles/subfiles.sty
+) (/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count540
+\lst@gtempboxa=\box79
+\lst@token=\toks55
+\lst@length=\count541
+\lst@currlwidth=\dimen315
+\lst@column=\count542
+\lst@pos=\count543
+\lst@lostspace=\dimen316
+\lst@width=\dimen317
+\lst@newlines=\count544
+\lst@lineno=\count545
+\lst@maxwidth=\dimen318
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count546
+\lst@skipnumbers=\count547
+\lst@framebox=\box80
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+==> First Aid for listings.sty no longer applied!
+    Expected:
+        2024/09/23 1.10c (Carsten Heinz)
+    but found:
+        2025/11/14 1.11b (Carsten Heinz)
+    so I'm assuming it got fixed.
+(/usr/local/texlive/2026/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
 
 (/usr/local/texlive/2026/texmf-dist/tex/latex/import/import.sty
@@ -2100,7 +2134,7 @@ Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 (/usr/local/texlive/2026/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 )
-\BKM@id=\count540
+\BKM@id=\count548
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'polyglossia' package.
@@ -2193,6 +2227,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Package hyperref Info: Link coloring OFF on input line 19.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/TeXGyreTermes(0)/m/n on input line 1
@@ -2476,22 +2511,33 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'default.bbl' found.
 
 (./default.bbl)
+
+Package biblatex Warning: citation 'ns3'
+(biblatex)                was not found at all in the .bbl file,
+(biblatex)                bibliography labels cannot be generated,
+(biblatex)                please correct the citation.
+
+
+Package biblatex Warning: citation 'omnetpp'
+(biblatex)                was not found at all in the .bbl file,
+(biblatex)                bibliography labels cannot be generated,
+(biblatex)                please correct the citation.
+
 Package biblatex Info: Reference section=0 on input line 19.
 Package biblatex Info: Reference segment=0 on input line 19.
-
 (/usr/local/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count541
-\scratchdimen=\dimen315
-\scratchbox=\box79
-\nofMPsegments=\count542
-\nofMParguments=\count543
-\everyMPshowfont=\toks55
-\MPscratchCnt=\count544
-\MPscratchDim=\dimen316
-\MPnumerator=\count545
-\makeMPintoPDFobject=\count546
-\everyMPtoPDFconversion=\toks56
+\scratchcounter=\count549
+\scratchdimen=\dimen319
+\scratchbox=\box81
+\nofMPsegments=\count550
+\nofMParguments=\count551
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count552
+\MPscratchDim=\dimen320
+\MPnumerator=\count553
+\makeMPintoPDFobject=\count554
+\everyMPtoPDFconversion=\toks57
 ) (/usr/local/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -2501,6 +2547,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+\c@lstlisting=\count555
+Package tocbasic Info: setting babel extension for `lol' on input line 19.
+\scr@dte@lstlisting@maxnumwidth=\skip125
 
 Package fontspec Info: 
 (fontspec)             TeX Gyre Termes Math scale = 0.9577773784132948.
@@ -7003,11 +7052,8 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [3]
-LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/n' will be
-(Font)              scaled to size 10.3357pt on input line 200.
 
-
-LaTeX Warning: Reference `1:endtitle' on page 4 undefined on input line 212.
+LaTeX Warning: Reference `1:endtitle' on page 4 undefined on input line 203.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -7016,24 +7062,28 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 [4]
 
+LaTeX Warning: Citation 'ns3' on page 5 undefined on input line 212.
+
+LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/n' will be
+(Font)              scaled to size 10.3357pt on input line 216.
+
+Underfull \hbox (badness 2197) in paragraph at lines 217--218
+[]\TU/TeXGyreCursor(0)/m/n/10 traffic-control\TU/TeXGyreTermes(0)/m/n/10 ---queu
+e dis-ci-plines in-clud-ing \TU/TeXGyreCursor(0)/m/n/10 RedQueueDisc \TU/TeXGyr
+eTermes(0)/m/n/10 (RED, ARED, Gen-
+ []
+
+
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [5]
-Overfull \hbox (54.36479pt too wide) in paragraph at lines 283--283
-[]\TU/TeXGyreCursor(0)/m/n/10 ./ns3 run "scratch/red-experiments/red.cc --config
-=configs/<algorithm>.txt"[] 
- []
+
+LaTeX Warning: Citation 'omnetpp' on page 6 undefined on input line 262.
 
 
-Overfull \hbox (10.54079pt too wide) in paragraph at lines 304--317
- [][] 
- []
-
-(./image/queue.pgf)
-
-LaTeX Warning: Reference `1:endtitle' on page 6 undefined on input line 333.
+LaTeX Warning: Reference `1:endtitle' on page 6 undefined on input line 264.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -7046,19 +7096,40 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
-[7] (./image/throughput.pgf)
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[7]
 
-
-
-LaTeX Warning: Reference `1:endtitle' on page 8 undefined on input line 393.
+LaTeX Warning: Reference `1:endtitle' on page 8 undefined on input line 364.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
-[8] (./image/drops.pgf)
+[8]
+Overfull \hbox (54.36479pt too wide) in paragraph at lines 390--390
+[]\TU/TeXGyreCursor(0)/m/n/10 ./ns3 run "scratch/red-experiments/red.cc --config
+=configs/<algorithm>.txt"[] 
+ []
+
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+)
+(/usr/local/texlive/2026/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/n' will be
+(Font)              scaled to size 9.30212pt on input line 414.
+LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/it' will be
+(Font)              scaled to size 9.30212pt on input line 415.
+LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/b/n' will be
+(Font)              scaled to size 8.8764pt on input line 416.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
@@ -7069,7 +7140,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Warning: Reference `1:endtitle' on page 10 undefined on input line 448.
+LaTeX Warning: Reference `1:endtitle' on page 10 undefined on input line 477.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -7077,21 +7148,104 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [11]
+Overfull \hbox (10.54079pt too wide) in paragraph at lines 531--544
+ [][] 
+ []
 
-LaTeX Warning: Reference `1:endtitle' on page 12 undefined on input line 499.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Warning: Reference `1:endtitle' on page 12 undefined on input line 545.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
-[12]
+[12] (./image/queue.pgf)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 3.60004pt, for example:
+(fancyhdr)                \setlength{\footskip}{3.60004pt}.
+
+[13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Warning: Reference `1:endtitle' on page 14 undefined on input line 590.
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 3.60004pt, for example:
+(fancyhdr)                \setlength{\footskip}{3.60004pt}.
+
+[14] (./image/throughput.pgf)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 3.60004pt, for example:
+(fancyhdr)                \setlength{\footskip}{3.60004pt}.
+
+[15] (./image/drops.pgf)
+
+LaTeX Warning: Reference `1:endtitle' on page 16 undefined on input line 651.
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 3.60004pt, for example:
+(fancyhdr)                \setlength{\footskip}{3.60004pt}.
+
+[16]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 3.60004pt, for example:
+(fancyhdr)                \setlength{\footskip}{3.60004pt}.
+
+[17]
+
+LaTeX Warning: Reference `1:endtitle' on page 18 undefined on input line 715.
+
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 3.60004pt, for example:
+(fancyhdr)                \setlength{\footskip}{3.60004pt}.
+
+[18]
+
+Package fancyhdr Warning: \footskip is too small (0.0pt): 
+(fancyhdr)                Make it at least 3.60004pt, for example:
+(fancyhdr)                \setlength{\footskip}{3.60004pt}.
+
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
+File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
+)
+(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/se-utf32be.def
+File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
+)
+[19] [20
+
+
+]
 
 Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              Note: KOMA-Script does use styles for commands like
@@ -7104,7 +7258,7 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              that will remove this deprecated code.
 
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/n' will be
-(Font)              scaled to size 13.46286pt on input line 499.
+(Font)              scaled to size 13.46286pt on input line 730.
 )
 \tf@titlelist.tex=\write7
 
@@ -7115,16 +7269,12 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                Make it at least 3.60004pt, for example:
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
-(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/se-pdfdoc.def
-File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
-)
-(/usr/local/texlive/2026/texmf-dist/tex/generic/stringenc/se-utf32be.def
-File: se-utf32be.def 2019/11/29 v1.12 stringenc: UTF-32BE
-)
-[13
+[21]
 
+LaTeX Warning: Hook 'shipout/lastpage' executed on wrong page (19 not 21).
+               Rerun to correct this.
 
-] (./default.aux)
+(./default.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -7136,37 +7286,56 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                default
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'default.run.xml'.
 
 \openout1 = default.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 44753 strings out of 476076
- 305213,4101490 words of node,token memory allocated
- 20218 words of node memory still in use:
+ 46492 strings out of 476076
+ 596165,4101490 words of node,token memory allocated
+ 20233 words of node memory still in use:
    15 hlist, 3 vlist, 2 rule, 240 disc, 1 local_par, 4 math, 159 glue, 13 kern, 
-15 penalty, 2218 glyph, 25 attribute, 85 glue_spec, 25 attribute_list, 2 write, 
-3 pdf_action nodes
-   avail lists: 1:5,2:22930,3:27956,4:156,5:942,6:98,7:12460,8:42,9:616,10:55,11
-:976
- 66012 multiletter control sequences out of 65536+600000
- 163 fonts using 42607619 bytes
+15 penalty, 2218 glyph, 26 attribute, 86 glue_spec, 26 attribute_list, 2 write, 
+4 pdf_action nodes
+   avail lists: 1:9,2:22930,3:27956,4:156,5:11533,6:99,7:13338,8:42,9:19573,10:5
+5,11:976
+ 67575 multiletter control sequences out of 65536+600000
+ 166 fonts using 43130495 bytes
  136i,17n,141p,11220b,6388s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2026/texmf-dist/fonts/opentype/public/tex-gyre/texgyrecursor
--regular.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/tex-gyre-
-math/texgyretermes-math.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/p
-ublic/tex-gyre-math/texgyretermes-math.otf></usr/local/texlive/2026/texmf-dist/f
-onts/opentype/public/tex-gyre/texgyreheros-bold.otf></usr/local/texlive/2026/tex
-mf-dist/fonts/opentype/public/tex-gyre/texgyretermes-italic.otf></usr/local/texl
-ive/2026/texmf-dist/fonts/opentype/public/tex-gyre/texgyretermes-regular.otf></u
-sr/local/texlive/2026/texmf-dist/fonts/opentype/public/tex-gyre/texgyretermes-bo
-lditalic.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/tex-gyre/
-texgyretermes-bold.otf>
-Output written on default.pdf (13 pages, 599418 bytes).
 
-PDF statistics: 279 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
- 69 named destinations out of 1000 (max. 1048576)
+warning  (pdf backend): unreferenced destination with name 'table.caption.12'
+
+warning  (pdf backend): unreferenced destination with name 'figure.caption.11'
+
+warning  (pdf backend): unreferenced destination with name 'table.caption.7'
+
+warning  (pdf backend): unreferenced destination with name 'lstlisting.0.2'
+
+warning  (pdf backend): unreferenced destination with name 'lstlisting.0.3'
+
+warning  (pdf backend): unreferenced destination with name 'lstlisting.0.1'
+</usr/local/texlive/2026/texmf-dist/fonts/opentype/public/tex-gyre/texgyrecursor
+-bold.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/tex-gyre/tex
+gyrecursor-italic.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/
+tex-gyre/texgyrecursor-regular.otf></usr/local/texlive/2026/texmf-dist/fonts/ope
+ntype/public/tex-gyre-math/texgyretermes-math.otf></usr/local/texlive/2026/texmf
+-dist/fonts/opentype/public/tex-gyre-math/texgyretermes-math.otf></usr/local/tex
+live/2026/texmf-dist/fonts/opentype/public/tex-gyre/texgyreheros-bold.otf></usr/
+local/texlive/2026/texmf-dist/fonts/opentype/public/tex-gyre/texgyretermes-itali
+c.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/tex-gyre/texgyre
+termes-regular.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/tex
+-gyre/texgyretermes-bolditalic.otf></usr/local/texlive/2026/texmf-dist/fonts/ope
+ntype/public/tex-gyre/texgyretermes-bold.otf>
+Output written on default.pdf (21 pages, 636081 bytes).
+
+PDF statistics: 442 PDF objects out of 1000 (max. 8388607)
+ 362 compressed objects within 4 object streams
+ 174 named destinations out of 1000 (max. 1048576)
  29 words of extra memory for PDF output out of 10000 (max. 100000000)
 
