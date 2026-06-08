@@ -407,11 +407,7 @@ python vis.py --algorithms red ared gentle --window 30
 To illustrate the experimental setup, Listings~\ref{lst:topology}--\ref{lst:tracing} present simplified pseudocode of the main simulation stages.
 
 \begin{figure}[H]
-\begin{lstlisting}[
-  language=C++,
-  morekeywords={NodeContainer,PointToPointHelper,InternetStackHelper,
-    TrafficControlHelper,RedQueueDisc,Config,SetAttribute}
-]
+\begin{minted}{cpp}
 // 1. Create network nodes
 NodeContainer senders(10), router(1), receiver(1);
 
@@ -441,17 +437,13 @@ tch.SetRootQueueDisc("ns3::RedQueueDisc",
     "ARED",     BooleanValue(aredFlag),
     "Gentle",   BooleanValue(gentleFlag));
 tch.Install(bottleneckDevice);
-\end{lstlisting}
+\end{minted}
 \caption{Topology construction and AQM installation (pseudocode)}
 \label{lst:topology}
 \end{figure}
 
 \begin{figure}[H]
-\begin{lstlisting}[
-  language=C++,
-  morekeywords={BulkSendHelper,PacketSinkHelper,ApplicationContainer,
-    InetSocketAddress,Seconds}
-]
+\begin{minted}{cpp}
 // 6. Install TCP BulkSend on each sender
 BulkSendHelper bulkSend("ns3::TcpSocketFactory",
     InetSocketAddress(receiverAddr, port));
@@ -470,17 +462,13 @@ sink.Install(receiver);
 // 8. Schedule start/stop
 senderApps.Start(Seconds(0.0));
 senderApps.Stop(Seconds(60.0));
-\end{lstlisting}
+\end{minted}
 \caption{Traffic generation setup (pseudocode)}
 \label{lst:traffic}
 \end{figure}
 
 \begin{figure}[H]
-\begin{lstlisting}[
-  language=C++,
-  morekeywords={Simulator,Callback,QueueDisc,Ptr,ofstream,Seconds,
-    ScheduleEvery}
-]
+\begin{minted}{cpp}
 // 9. Queue length sampling (every 100 ms)
 void SampleQueue(Ptr<QueueDisc> qdisc, ofstream& out) {
     double t = Simulator::Now().GetSeconds();
@@ -511,7 +499,7 @@ ScheduleEvery(Seconds(0.1), &SampleThroughput, sink, tputFile,
 Simulator::Stop(Seconds(60.0));
 Simulator::Run();
 Simulator::Destroy();
-\end{lstlisting}
+\end{minted}
 \caption{Trace callbacks for metric collection (pseudocode)}
 \label{lst:tracing}
 \end{figure}

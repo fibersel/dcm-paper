@@ -48,14 +48,12 @@ mathic=true,
 \usepackage{pgf}
 \usepackage{booktabs}
 \usepackage{float}
-\usepackage{listings}
-\lstset{
-  basicstyle=\small\ttfamily,
+\usepackage{minted}
+\setminted{
+  fontsize=\small,
   frame=single,
-  numbers=left,
-  numberstyle=\tiny,
-  breaklines=true,
-  captionpos=b,
+  linenos,
+  breaklines,
 }
 
 \def\No{\protect\textnumero}
