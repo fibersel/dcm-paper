@@ -1,0 +1,10 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+  Sender 0  \PYGZhy{}\PYGZhy{}\PYGZbs{}
+  Sender 1  \PYGZhy{}\PYGZhy{}|
+  Sender 2  \PYGZhy{}\PYGZhy{}|  1 Mbit/s         2 Mbit/s
+      ...     |\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} [Router] \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZgt{} Receiver
+  Sender 8  \PYGZhy{}\PYGZhy{}|  delay 2 ms      delay 10 ms
+  Sender 9  \PYGZhy{}\PYGZhy{}/                \PYGZca{}
+                          AQM queue
+                       (RED / ARED / Gentle)
+\end{MintedVerbatim}

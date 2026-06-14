@@ -1,0 +1,20 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// 6. Install TCP BulkSend on each sender}
+\PYG{n}{BulkSendHelper}\PYG{+w}{ }\PYG{n}{bulkSend}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}ns3::TcpSocketFactory\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{InetSocketAddress}\PYG{p}{(}\PYG{n}{receiverAddr}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{port}\PYG{p}{));}
+\PYG{n}{bulkSend}\PYG{p}{.}\PYG{n}{SetAttribute}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}SendSize\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{UintegerValue}\PYG{p}{(}\PYG{l+m+mi}{512}\PYG{p}{));}
+\PYG{n}{bulkSend}\PYG{p}{.}\PYG{n}{SetAttribute}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}MaxBytes\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{UintegerValue}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{));}\PYG{+w}{ }\PYG{c+c1}{// unlimited}
+
+\PYG{n}{ApplicationContainer}\PYG{+w}{ }\PYG{n}{senderApps}\PYG{p}{;}
+\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+\PYG{+w}{    }\PYG{n}{senderApps}\PYG{p}{.}\PYG{n}{Add}\PYG{p}{(}\PYG{n}{bulkSend}\PYG{p}{.}\PYG{n}{Install}\PYG{p}{(}\PYG{n}{senders}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]));}
+
+\PYG{c+c1}{// 7. Install PacketSink on receiver}
+\PYG{n}{PacketSinkHelper}\PYG{+w}{ }\PYG{n}{sink}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}ns3::TcpSocketFactory\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{InetSocketAddress}\PYG{p}{(}\PYG{n}{Ipv4Address}\PYG{o}{::}\PYG{n}{GetAny}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{port}\PYG{p}{));}
+\PYG{n}{sink}\PYG{p}{.}\PYG{n}{Install}\PYG{p}{(}\PYG{n}{receiver}\PYG{p}{);}
+
+\PYG{c+c1}{// 8. Schedule start/stop}
+\PYG{n}{senderApps}\PYG{p}{.}\PYG{n}{Start}\PYG{p}{(}\PYG{n}{Seconds}\PYG{p}{(}\PYG{l+m+mf}{0.0}\PYG{p}{));}
+\PYG{n}{senderApps}\PYG{p}{.}\PYG{n}{Stop}\PYG{p}{(}\PYG{n}{Seconds}\PYG{p}{(}\PYG{l+m+mf}{60.0}\PYG{p}{));}
+\end{MintedVerbatim}

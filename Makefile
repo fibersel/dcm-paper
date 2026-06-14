@@ -1,5 +1,5 @@
 FILE = `cat NAME`
-LATEX = lualatex
+LATEX = lualatex --shell-escape
 
 all:
 	$(LATEX) $(FILE)

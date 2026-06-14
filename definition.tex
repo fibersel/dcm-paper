@@ -46,15 +46,17 @@ mathic=true,
 \usepackage{url}
 
 \usepackage{pgf}
-\usepackage{booktabs}
 \usepackage{float}
+\usepackage{tabularray}
 \usepackage{minted}
 \setminted{
   fontsize=\small,
   frame=single,
-  linenos,
-  breaklines,
+  numbers=left,
+  breaklines=true,
 }
+
+\newcommand{\mathdefault}[1]{#1}
 
 \def\No{\protect\textnumero}
 

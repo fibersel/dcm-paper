@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+git\PYG{+w}{ }clone\PYG{+w}{ }https://gitlab.com/nsnam/ns\PYGZhy{}3\PYGZhy{}dev.git\PYG{+w}{ }ns\PYGZhy{}3.41
+\PYG{n+nb}{cd}\PYG{+w}{ }ns\PYGZhy{}3.41
+./ns3\PYG{+w}{ }configure\PYG{+w}{ }\PYGZhy{}\PYGZhy{}enable\PYGZhy{}examples\PYG{+w}{ }\PYGZhy{}\PYGZhy{}enable\PYGZhy{}tests
+./ns3\PYG{+w}{ }build
+\end{MintedVerbatim}

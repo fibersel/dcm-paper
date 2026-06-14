@@ -1,0 +1,3 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+./ns3\PYG{+w}{ }run\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}scratch/\PYGZlt{}script\PYGZhy{}name\PYGZgt{} [\PYGZhy{}\PYGZhy{}command\PYGZhy{}line\PYGZhy{}arguments]\PYGZdq{}}
+\end{MintedVerbatim}

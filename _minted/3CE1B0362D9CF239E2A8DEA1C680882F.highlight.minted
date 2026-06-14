@@ -1,0 +1,31 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// 1. Create network nodes}
+\PYG{n}{NodeContainer}\PYG{+w}{ }\PYG{n+nf}{senders}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{router}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{receiver}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{);}
+
+\PYG{c+c1}{// 2. Configure access links (sender \PYGZhy{}\PYGZgt{} router)}
+\PYG{n}{PointToPointHelper}\PYG{+w}{ }\PYG{n}{accessLink}\PYG{p}{;}
+\PYG{n}{accessLink}\PYG{p}{.}\PYG{n}{SetRate}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}1Mbps\PYGZdq{}}\PYG{p}{);}
+\PYG{n}{accessLink}\PYG{p}{.}\PYG{n}{SetDelay}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}2ms\PYGZdq{}}\PYG{p}{);}
+\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{10}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+\PYG{+w}{    }\PYG{n}{accessLink}\PYG{p}{.}\PYG{n}{Install}\PYG{p}{(}\PYG{n}{senders}\PYG{p}{[}\PYG{n}{i}\PYG{p}{],}\PYG{+w}{ }\PYG{n}{router}\PYG{p}{);}
+
+\PYG{c+c1}{// 3. Configure bottleneck link (router \PYGZhy{}\PYGZgt{} receiver)}
+\PYG{n}{PointToPointHelper}\PYG{+w}{ }\PYG{n}{bottleneck}\PYG{p}{;}
+\PYG{n}{bottleneck}\PYG{p}{.}\PYG{n}{SetRate}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}2Mbps\PYGZdq{}}\PYG{p}{);}
+\PYG{n}{bottleneck}\PYG{p}{.}\PYG{n}{SetDelay}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}10ms\PYGZdq{}}\PYG{p}{);}
+\PYG{n}{bottleneck}\PYG{p}{.}\PYG{n}{Install}\PYG{p}{(}\PYG{n}{router}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{receiver}\PYG{p}{);}
+
+\PYG{c+c1}{// 4. Install IP stack on all nodes}
+\PYG{n}{InternetStackHelper}\PYG{+w}{ }\PYG{n}{stack}\PYG{p}{;}
+\PYG{n}{stack}\PYG{p}{.}\PYG{n}{InstallAll}\PYG{p}{();}
+
+\PYG{c+c1}{// 5. Install AQM queue discipline on bottleneck}
+\PYG{n}{TrafficControlHelper}\PYG{+w}{ }\PYG{n}{tch}\PYG{p}{;}
+\PYG{n}{tch}\PYG{p}{.}\PYG{n}{SetRootQueueDisc}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}ns3::RedQueueDisc\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{l+s}{\PYGZdq{}MinTh\PYGZdq{}}\PYG{p}{,}\PYG{+w}{    }\PYG{n}{DoubleValue}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{),}
+\PYG{+w}{    }\PYG{l+s}{\PYGZdq{}MaxTh\PYGZdq{}}\PYG{p}{,}\PYG{+w}{    }\PYG{n}{DoubleValue}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{),}
+\PYG{+w}{    }\PYG{l+s}{\PYGZdq{}MaxSize\PYGZdq{}}\PYG{p}{,}\PYG{+w}{  }\PYG{n}{QueueSizeValue}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}100p\PYGZdq{}}\PYG{p}{),}
+\PYG{+w}{    }\PYG{l+s}{\PYGZdq{}ARED\PYGZdq{}}\PYG{p}{,}\PYG{+w}{     }\PYG{n}{BooleanValue}\PYG{p}{(}\PYG{n}{aredFlag}\PYG{p}{),}
+\PYG{+w}{    }\PYG{l+s}{\PYGZdq{}Gentle\PYGZdq{}}\PYG{p}{,}\PYG{+w}{   }\PYG{n}{BooleanValue}\PYG{p}{(}\PYG{n}{gentleFlag}\PYG{p}{));}
+\PYG{n}{tch}\PYG{p}{.}\PYG{n}{Install}\PYG{p}{(}\PYG{n}{bottleneckDevice}\PYG{p}{);}
+\end{MintedVerbatim}

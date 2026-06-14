@@ -1,0 +1,32 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// 9. Queue length sampling (every 100 ms)}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{SampleQueue}\PYG{p}{(}\PYG{n}{Ptr}\PYG{o}{\PYGZlt{}}\PYG{n}{QueueDisc}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{qdisc}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ofstream}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{t}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{Simulator}\PYG{o}{::}\PYG{n}{Now}\PYG{p}{().}\PYG{n}{GetSeconds}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k+kt}{uint32\PYGZus{}t}\PYG{+w}{ }\PYG{n}{qLen}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{qdisc}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{GetCurrentSize}\PYG{p}{().}\PYG{n}{GetValue}\PYG{p}{();}
+\PYG{+w}{    }\PYG{n}{out}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{t}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{},\PYGZdq{}}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{qLen}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{n}{ScheduleEvery}\PYG{p}{(}\PYG{n}{Seconds}\PYG{p}{(}\PYG{l+m+mf}{0.1}\PYG{p}{),}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{SampleQueue}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{redQueue}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{queueFile}\PYG{p}{);}
+
+\PYG{c+c1}{// 10. Drop event tracing}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{OnDrop}\PYG{p}{(}\PYG{n}{ofstream}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Ptr}\PYG{o}{\PYGZlt{}}\PYG{k}{const}\PYG{+w}{ }\PYG{n}{QueueDiscItem}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{item}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{out}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{Simulator}\PYG{o}{::}\PYG{n}{Now}\PYG{p}{().}\PYG{n}{GetSeconds}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{n}{redQueue}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{TraceConnectWithoutContext}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}Drop\PYGZdq{}}\PYG{p}{,}
+\PYG{+w}{    }\PYG{n}{MakeBoundCallback}\PYG{p}{(}\PYG{o}{\PYGZam{}}\PYG{n}{OnDrop}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dropFile}\PYG{p}{));}
+
+\PYG{c+c1}{// 11. Throughput sampling (every 100 ms)}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{SampleThroughput}\PYG{p}{(}\PYG{n}{Ptr}\PYG{o}{\PYGZlt{}}\PYG{n}{PacketSink}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{sink}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ofstream}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{out}\PYG{p}{,}
+\PYG{+w}{                      }\PYG{k+kt}{uint64\PYGZus{}t}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{prevBytes}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{uint64\PYGZus{}t}\PYG{+w}{ }\PYG{n}{curr}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{sink}\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{n}{GetTotalRx}\PYG{p}{();}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{tput}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{curr}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{prevBytes}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mf}{8.0}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mf}{0.1}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// bits/s}
+\PYG{+w}{    }\PYG{n}{out}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{Simulator}\PYG{o}{::}\PYG{n}{Now}\PYG{p}{().}\PYG{n}{GetSeconds}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{},\PYGZdq{}}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{tput}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s}{\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{prevBytes}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{curr}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{n}{ScheduleEvery}\PYG{p}{(}\PYG{n}{Seconds}\PYG{p}{(}\PYG{l+m+mf}{0.1}\PYG{p}{),}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{SampleThroughput}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{sink}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{tputFile}\PYG{p}{,}
+\PYG{+w}{              }\PYG{n}{prevBytes}\PYG{p}{);}
+
+\PYG{c+c1}{// 12. Run simulation}
+\PYG{n}{Simulator}\PYG{o}{::}\PYG{n}{Stop}\PYG{p}{(}\PYG{n}{Seconds}\PYG{p}{(}\PYG{l+m+mf}{60.0}\PYG{p}{));}
+\PYG{n}{Simulator}\PYG{o}{::}\PYG{n}{Run}\PYG{p}{();}
+\PYG{n}{Simulator}\PYG{o}{::}\PYG{n}{Destroy}\PYG{p}{();}
+\end{MintedVerbatim}

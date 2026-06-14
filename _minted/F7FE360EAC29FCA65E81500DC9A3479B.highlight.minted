@@ -1,0 +1,13 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+ns\PYGZhy{}3.41/
++\PYGZhy{}\PYGZhy{} scratch/
+    +\PYGZhy{}\PYGZhy{} red\PYGZhy{}experiments/
+        +\PYGZhy{}\PYGZhy{} red.cc
+        +\PYGZhy{}\PYGZhy{} configs/
+        |   +\PYGZhy{}\PYGZhy{} red.txt
+        |   +\PYGZhy{}\PYGZhy{} ared.txt
+        |   +\PYGZhy{}\PYGZhy{} gentle.txt
+        +\PYGZhy{}\PYGZhy{} analysis/
+            +\PYGZhy{}\PYGZhy{} vis.py
+            +\PYGZhy{}\PYGZhy{} ...
+\end{MintedVerbatim}

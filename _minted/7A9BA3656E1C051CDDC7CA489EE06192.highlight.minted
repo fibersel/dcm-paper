@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+aqmType=red
+minTh=5
+maxTh=10
+MaxSize=100
+\end{MintedVerbatim}

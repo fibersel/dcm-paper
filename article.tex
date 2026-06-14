@@ -23,36 +23,30 @@
 
 \title{Comparative Analysis of Active Queue Management Algorithms: RED, ARED, Gentle~RED}
 
-\author[rudn]{Abuli M. Palagashvili}
+\author[rudn]{Abuli Mikhailovich Palagashvili}
 
 \address[rudn]{RUDN University, 6 Miklukho-Maklaya St, Moscow, 117198, Russian Federation}
 
 \begin{authordescription}
-  \authorfull[english]{Palagashvili, Abuli M.}
+  \authorfull[english]{Palagashvili, Abuli Mikhailovich}
   \authorpost[english]{PhD student of Department of Applied Probability and Informatics of Peoples' Friendship University of Russia (RUDN University)}
+  \authorfull[russian]{Палагашвили Абули Михайлович}
+  \authorpost[russian]{Аспирант кафедры прикладной информатики и теории вероятностей Российского университета дружбы народов (РУДН)}
   \email{1042250185@rudn.ru}
   \orcid{0009-0007-7009-7038}
 \end{authordescription}
 
 \abstracts{%
-  This paper presents a systematic comparative analysis of three
-  Active Queue Management (AQM) algorithms from the RED family:
-  RED (Random Early Detection), ARED (Adaptive RED), and Gentle~RED.
-  A dumbbell-topology network model is implemented in the ns-3
-  simulator with ten TCP bulk-send sources creating sustained
-  congestion at a bottleneck link. All three algorithms are evaluated
-  under identical conditions (same queue thresholds, load profile,
-  and topology). An extended set of metrics is proposed, including
-  EWMA zone distribution and temporal drop structure. Results show
-  that while all algorithms achieve the same average throughput
-  ($\sim$90\% link utilization), they exhibit fundamentally different
-  buffer management dynamics: RED provides the most predictable
-  throughput (CV~=~18.7\%) at the cost of highest drop count;
-  ARED minimizes drops ($-19\%$ vs.\ RED) but produces the largest
-  queue oscillations (p99~=~49~packets); Gentle~RED achieves the
-  lowest average queue length (6.40~packets) with the highest
-  throughput variability (CV~=~24.7\%). Practical recommendations
-  for algorithm selection based on scenario priorities are formulated.
+  \textbf{Background.}
+  Active Queue Management (AQM) algorithms of the RED family remain widely deployed in network equipment, yet a systematic three-way comparison of RED, Adaptive RED (ARED), and Gentle~RED under strictly identical conditions is lacking in the literature.
+  \textbf{Purpose.}
+  The aim of this study is to quantify the differences in buffer management dynamics, throughput stability, and congestion signaling among the three algorithms and to formulate practical selection guidelines.
+  \textbf{Method.}
+  A dumbbell-topology network model was implemented in the ns-3 discrete-event simulator (version~3.41) with ten TCP bulk-send sources creating sustained congestion at a 2~Mbit/s bottleneck link. All three algorithms were evaluated with identical queue thresholds, load profile, and topology over a 60-second simulation. An extended metric set including EWMA zone distribution and temporal drop structure was applied.
+  \textbf{Results.}
+  All algorithms achieved approximately 90\% link utilization (mean throughput 1.80~Mbit/s). RED provided the most predictable throughput (coefficient of variation 18.7\%) at the cost of the highest drop count (1240~packets). ARED minimized drops (1003~packets, 19\% fewer than RED) but produced the largest queue oscillations (p99 of 49~packets). Gentle~RED achieved the lowest mean queue length (6.40~packets) with the highest throughput variability (coefficient of variation 24.7\%).
+  \textbf{Conclusions.}
+  No single algorithm is universally optimal; the choice depends on scenario priorities: Gentle~RED for minimum delay, ARED for minimum packet loss, and RED for maximum throughput predictability.
 }
 
 \keywords{active queue management, AQM, RED, Adaptive RED, Gentle RED,
@@ -65,27 +59,18 @@
 \altaddress[rudn]{Российский университет дружбы народов,
   ул. Миклухо-Маклая, д.6, Москва, 117198, Российская Федерация}
 
+
 \altabstracts{%
-  В данной работе представлен систематический сравнительный анализ
-  трёх алгоритмов активного управления очередями (AQM) семейства
-  RED: RED (Random Early Detection), ARED (Adaptive RED) и
-  Gentle~RED. Реализована симуляционная модель сети с топологией
-  <<гантель>> в среде ns-3 с десятью TCP-источниками, создающими
-  устойчивую перегрузку узкого канала. Все три алгоритма
-  оцениваются в строго идентичных условиях (единые пороги очереди,
-  профиль нагрузки и топология). Предложен расширенный набор метрик
-  оценки, включающий зональное распределение EWMA-средней и
-  временну́ю структуру сбросов. Результаты показывают, что при
-  одинаковой средней пропускной способности ($\sim$90\% утилизации
-  канала) алгоритмы принципиально различаются по динамике
-  управления буфером: RED обеспечивает наиболее предсказуемую
-  пропускную способность (CV~=~18,7\%) ценой наибольшего числа
-  сбросов; ARED минимизирует сбросы ($-19\%$ к RED), но порождает
-  наибольшие осцилляции очереди (p99~=~49~пакетов); Gentle~RED
-  достигает наименьшей средней очереди (6,40~пакета) при наибольшей
-  вариабельности пропускной способности (CV~=~24,7\%).
-  Сформулированы практические рекомендации по выбору алгоритма в
-  зависимости от приоритетных требований сценария.}
+  \textbf{Предпосылки.}
+  Алгоритмы активного управления очередями (AQM) семейства RED широко применяются в сетевом оборудовании, однако систематическое трёхстороннее сравнение RED, Adaptive~RED (ARED) и Gentle~RED в строго идентичных условиях недостаточно представлено в литературе.
+  \textbf{Цель.}
+  Целью данного исследования является количественное определение различий в динамике управления буфером, стабильности пропускной способности и характере сигналов перегрузки между тремя алгоритмами, а также формулировка практических рекомендаций по их выбору.
+  \textbf{Метод.}
+  Реализована модель сети с топологией <<гантель>> в среде дискретно-событийного симулятора ns-3 (версия~3.41) с десятью TCP-источниками, создающими устойчивую перегрузку узкого канала (2~Мбит/с). Все три алгоритма оценены с идентичными порогами очереди, профилем нагрузки и топологией в течение 60 секунд моделирования. Применён расширенный набор метрик, включающий зональное распределение EWMA-средней и временну́ю структуру сбросов.
+  \textbf{Результаты.}
+  Все алгоритмы обеспечили приблизительно 90\% утилизации канала (средняя пропускная способность 1,80~Мбит/с). RED показал наиболее предсказуемую пропускную способность (коэффициент вариации 18,7\%) ценой наибольшего числа сбросов (1240~пакетов). ARED минимизировал сбросы (1003~пакета, на 19\% меньше RED), но породил наибольшие осцилляции очереди (p99~=~49~пакетов). Gentle~RED достиг наименьшей средней длины очереди (6,40~пакета) при наибольшей вариабельности пропускной способности (коэффициент вариации 24,7\%).
+  \textbf{Выводы.}
+  Универсально оптимального алгоритма не существует; выбор определяется приоритетами сценария: Gentle~RED для минимальной задержки, ARED для минимальных потерь пакетов, RED для максимальной предсказуемости пропускной способности.}
 
 \altkeywords{активное управление очередями, AQM, RED, Adaptive RED,
   Gentle RED, управление перегрузкой, ns-3, сетевое моделирование,
@@ -99,21 +84,21 @@
 
 The continuous growth of Internet traffic, driven by the development of cloud computing, video streaming, and 5G/6G networks, imposes increasingly stringent requirements on congestion management mechanisms in network nodes. The traditional approach---tail-drop, in which packets are discarded only when the buffer is completely full---leads to global synchronization of TCP flows, sharp oscillations of throughput, and the bufferbloat effect~\cite{gettys2012}. The bufferbloat problem---systematic buffer overflow in routers causing end-to-end delay growth by orders of magnitude---has been identified as one of the key threats to quality of service~\cite{rfc8289}.
 
-Active Queue Management (AQM) algorithms, recommended by IETF in RFC~2309~\cite{rfc2309}, solve this problem by preemptive dropping or marking of packets before buffer overflow. The RED (Random Early Detection) family of algorithms remains the most widely deployed class of AQM mechanisms: RED is implemented in all major network operating systems (Cisco IOS, Linux tc, FreeBSD ALTQ), and its variants---ARED and Gentle RED---are shipped as standard modules in the ns-3 simulator and the Linux kernel. Despite the emergence of new algorithms (CoDel~\cite{nichols2012}, PIE~\cite{pan2013}), the choice of a specific RED variant for specific operating conditions still requires experimental justification, since analytical models do not account for all aspects of interaction with heterogeneous TCP traffic.
+Active Queue Management (AQM) algorithms, recommended by IETF in RFC~2309~\cite{rfc2309}, solve this problem by preemptive dropping or marking of packets before buffer overflow~\cite{adams2012}. The RED (Random Early Detection) family of algorithms remains the most widely deployed class of AQM mechanisms~\cite{kulyabov2018}: RED is implemented in all major network operating systems (Cisco IOS, Linux tc, FreeBSD ALTQ), and its variants---ARED and Gentle RED---are shipped as standard modules in the ns-3 simulator and the Linux kernel. Despite the emergence of new algorithms (CoDel~\cite{nichols2012}, PIE~\cite{pan2013}), the choice of a specific RED variant for specific operating conditions still requires experimental justification, since analytical models do not account for all aspects of interaction with heterogeneous TCP traffic.
 
 \subsection{Literature review}
 
-The RED algorithm was proposed by Floyd and Jacobson in 1993~\cite{floyd1993} and became the first practical AQM mechanism. The authors demonstrated that probabilistic early dropping of packets based on the exponentially weighted moving average (EWMA) of queue length avoids global synchronization of TCP flows and reduces average buffer delay compared to tail-drop.
+The RED algorithm was proposed by Floyd and Jacobson in 1993~\cite{floyd1993}, building on the foundational work on congestion avoidance~\cite{jacobson1988}, and became the first practical AQM mechanism. The authors demonstrated that probabilistic early dropping of packets based on the exponentially weighted moving average (EWMA) of queue length avoids global synchronization of TCP flows and reduces average buffer delay compared to tail-drop.
 
 Practical deployment of RED revealed its main drawback---high sensitivity to parameter tuning. Christiansen et~al.~\cite{christiansen2001} showed that RED performance significantly depends on the ratio of $\mathrm{min}_{\mathrm{Th}}$, $\mathrm{max}_{\mathrm{Th}}$, and $\mathrm{maxP}$, with optimal values changing as the number of flows and load level change. To overcome this limitation, Floyd et~al.~\cite{floyd2001} proposed ARED (Adaptive RED), in which the $\mathrm{maxP}$ parameter automatically adapts to the current load based on the deviation of the average queue from the target range.
 
-In parallel, Floyd~\cite{floyd2000} proposed the Gentle RED modification, which eliminates the sharp transition of drop probability from $\mathrm{maxP}$ to~$1$ at $\bar{q} = \mathrm{max}_{\mathrm{Th}}$. Gentle RED introduces an additional linear zone $[\mathrm{max}_{\mathrm{Th}},\, 2\cdot\mathrm{max}_{\mathrm{Th}})$, in which the probability smoothly increases to unity, reducing TCP flow synchronization and decreasing delay variance during short-term bursts.
+In parallel, Floyd~\cite{floyd2000} proposed the Gentle RED modification, which eliminates the sharp transition of drop probability from $\mathrm{maxP}$ to~$1$ at $\bar{q} = \mathrm{max}_{\mathrm{Th}}$. Gentle RED introduces an additional linear zone $[\mathrm{max}_{\mathrm{Th}},\, 2\cdot\mathrm{max}_{\mathrm{Th}})$, in which the probability smoothly increases to unity, reducing TCP flow synchronization and decreasing delay variance during short-term bursts. An alternative to packet dropping is Explicit Congestion Notification (ECN)~\cite{rfc3168}, which marks rather than drops packets, though its interaction with RED-family algorithms is outside the scope of this work.
 
-A significant contribution to mathematical modeling of TCP and RED interaction was made by Korolkova~A.V.~\cite{korolkova2010}, who constructed a mathematical model of the traffic transmission process with dynamic flow intensity regulated by a RED-type algorithm. In her work, using the apparatus of stochastic differential equations with a Poisson process, an autonomous system of three ordinary differential equations was formalized for the first time, describing the joint dynamics of TCP window size, instantaneous queue length, and EWMA average. A method was proposed for determining the region of self-oscillation occurrence, and qualitative analysis of the model was performed using RED, GRED, DSRED, and ARED algorithms in the NS-2 simulator.
+A significant contribution to mathematical modeling of TCP and RED interaction was made by Anna Vladimirovna Korolkova~\cite{korolkova2010}, who constructed a mathematical model of the traffic transmission process with dynamic flow intensity regulated by a RED-type algorithm. In her work, using the apparatus of stochastic differential equations with a Poisson process, an autonomous system of three ordinary differential equations was formalized for the first time, describing the joint dynamics of TCP window size, instantaneous queue length, and EWMA average. A method was proposed for determining the region of self-oscillation occurrence, and qualitative analysis of the model was performed using RED, GRED, DSRED, and ARED algorithms in the NS-2 simulator.
 
-The development of this direction was continued by Velieva~T.R.~\cite{velieva2019}, who investigated nonlinear phenomena and boundaries of the self-oscillation region in continuous-discrete dynamical models. The key contribution of this work was the adaptation of the Krylov--Bogolyubov method and harmonic linearization method to the continuous-discrete TCP/RED model, which made it possible to analytically determine the amplitude-frequency characteristics of self-oscillations and the boundaries of their occurrence region in the parameter space.
+The development of this direction was continued by Tatyana Refatovna Velieva~\cite{velieva2019}, who investigated nonlinear phenomena and boundaries of the self-oscillation region in continuous-discrete dynamical models. The key contribution of this work was the adaptation of the Krylov--Bogolyubov method and harmonic linearization method to the continuous-discrete TCP/RED model, which made it possible to analytically determine the amplitude-frequency characteristics of self-oscillations and the boundaries of their occurrence region in the parameter space.
 
-Among alternative approaches to AQM, the BLUE algorithm~\cite{feng2002}, which controls drop probability based on loss events and link idle events, and the family of control-theory-based algorithms---the PI controller of Hollot et~al.~\cite{hollot2001} and its development PIE~\cite{pan2013}---should be noted. The CoDel algorithm~\cite{nichols2012} uses a fundamentally different approach, tracking the sojourn time of a packet in the queue instead of queue length.
+Among alternative approaches to AQM, the BLUE algorithm~\cite{feng2002}, which controls drop probability based on loss events and link idle events, the SRED algorithm~\cite{ott1999}, which stabilizes queue behavior through zombie list-based flow identification, and the family of control-theory-based algorithms---the PI controller of Hollot et~al.~\cite{hollot2001} and its development PIE~\cite{pan2013}---should be noted. The fluid-based analytical framework of Misra et~al.~\cite{misra2000} provided theoretical foundations for understanding TCP/AQM interaction dynamics. The CoDel algorithm~\cite{nichols2012} uses a fundamentally different approach, tracking the sojourn time of a packet in the queue instead of queue length.
 
 Thus, despite extensive research on individual aspects of the RED family algorithms---both analytical (stability, self-oscillations) and experimental---a systematic three-way comparison of RED, ARED, and Gentle~RED under strictly identical conditions with an extended set of metrics (including temporal drop structure and zone distribution of the queue) is insufficiently represented in the literature.
 
@@ -238,10 +223,13 @@ Key reasons for choosing ns-3 in this work:
 \centering
 \caption{Architectural comparison of ns-2 and ns-3}
 \label{tab:ns2-vs-ns3}
-\begin{tabular}{lll}
-\toprule
+\begin{tblr}{
+  colspec = {lll},
+  row{1} = {font=\bfseries},
+  hline{1,2} = {0.08em},
+  hline{Z} = {0.08em},
+}
 Aspect & ns-2 & ns-3 \\
-\midrule
 Language & C++ core + OTcl scripting & C++ throughout (Python optional) \\
 Architecture & Split object model (C++/OTcl) & Unified object model \\
 IP model & Abstract addressing & Real IP stack (BSD-like) \\
@@ -249,8 +237,7 @@ Packet format & Simulated headers & Serialized byte buffers \\
 Emulation & Limited & Real-time scheduler, tap bridges \\
 Maintenance & Frozen (last release 2011) & Active (latest release 2024) \\
 Validation & Community scripts & Regression test suite per module \\
-\bottomrule
-\end{tabular}
+\end{tblr}
 \end{table}
 
 The split-object architecture of ns-2 required researchers to maintain parallel class hierarchies in C++ and OTcl, leading to steep learning curves and frequent synchronization bugs between the two layers. ns-3 eliminates this duality: simulation scripts are written in the same C++ (or Python) that implements the models. Furthermore, ns-2 used abstract 32-bit node addresses and simplified packet headers, while ns-3 models real IPv4/IPv6 headers with proper checksums and fragmentation---enabling direct validation against packet captures from physical networks.
@@ -270,33 +257,35 @@ Table~\ref{tab:sim-comparison} provides a summary comparison of simulation tools
 \centering
 \caption{Comparison of network simulation/emulation environments}
 \label{tab:sim-comparison}
-\begin{tabular}{lccccc}
-\toprule
+\begin{tblr}{
+  colspec = {lccccc},
+  row{1} = {font=\bfseries},
+  hline{1,2} = {0.08em},
+  hline{Z} = {0.08em},
+}
 Property & ns-3 & ns-2 & OMNeT++ & Mininet & OPNET \\
-\midrule
 Type & DES & DES & DES & Emulation & DES \\
 License & GPLv2 & GPLv2 & Academic/Comm. & BSD & Commercial \\
 RED family support & Full & Partial & INET & Kernel & Yes \\
 Reproducibility & Exact & Exact & Exact & Approximate & Exact \\
 Active development & Yes & No & Yes & Yes & Yes \\
-\bottomrule
-\end{tabular}
+\end{tblr}
 \end{table}
 
 \subsubsection{Installation and setup}
 
 ns-3 is distributed as source code and can be built on Linux (Ubuntu, Fedora, CentOS) and macOS. The build system requires a C++17-compatible compiler (GCC~$\ge$~9 or Clang~$\ge$~11), CMake~$\ge$~3.13, and Python~3. The minimal installation procedure is:
-\begin{verbatim}
+\begin{minted}{bash}
 git clone https://gitlab.com/nsnam/ns-3-dev.git ns-3.41
 cd ns-3.41
 ./ns3 configure --enable-examples --enable-tests
 ./ns3 build
-\end{verbatim}
+\end{minted}
 
 The \texttt{./ns3 configure} step detects available optional dependencies (GTK for visualization, SQLite for statistics, MPI for distributed simulation) and generates the build system. The \texttt{./ns3 build} step compiles all enabled modules into shared libraries. After building, simulation scripts are placed in the \texttt{scratch/} directory and executed via:
-\begin{verbatim}
+\begin{minted}{bash}
 ./ns3 run "scratch/<script-name> [--command-line-arguments]"
-\end{verbatim}
+\end{minted}
 
 For this work, a dedicated subdirectory \texttt{scratch/red-experiments/} was created containing the simulation source code, configuration files, and analysis scripts.
 
@@ -304,7 +293,7 @@ For this work, a dedicated subdirectory \texttt{scratch/red-experiments/} was cr
 
 The experiment uses a dumbbell topology: multiple senders are connected to a common router through fast links, and the router is connected to a single receiver through a narrow bottleneck link with limited bandwidth. The narrow link is the only possible congestion point, and the AQM queue discipline is installed on its outgoing interface.
 
-\begin{verbatim}
+\begin{minted}{text}
   Sender 0  --\
   Sender 1  --|
   Sender 2  --|  1 Mbit/s         2 Mbit/s
@@ -313,9 +302,9 @@ The experiment uses a dumbbell topology: multiple senders are connected to a com
   Sender 9  --/                ^
                           AQM queue
                        (RED / ARED / Gentle)
-\end{verbatim}
+\end{minted}
 
-Each of the ten senders establishes one TCP connection with the receiver and continuously transmits data (BulkSend). The total incoming load on the router potentially reaches $10 \times 1$~Mbit/s~$= 10$~Mbit/s, which is 5~times the bottleneck link capacity. This ensures sustained congestion and allows evaluation of AQM algorithm behavior under real buffer saturation conditions.
+Each of the ten senders establishes one TCP connection (using TCP CUBIC~\cite{ha2008}) with the receiver and continuously transmits data (BulkSend). The total incoming load on the router potentially reaches $10 \times 1$~Mbit/s~$= 10$~Mbit/s, which is 5~times the bottleneck link capacity. This ensures sustained congestion and allows evaluation of AQM algorithm behavior under real buffer saturation conditions.
 
 Topology parameters are listed in Table~\ref{tab:topology}.
 
@@ -323,18 +312,20 @@ Topology parameters are listed in Table~\ref{tab:topology}.
 \centering
 \caption{Topology and simulation parameters}
 \label{tab:topology}
-\begin{tabular}{lll}
-\toprule
+\begin{tblr}{
+  colspec = {lll},
+  row{1} = {font=\bfseries},
+  hline{1,2} = {0.08em},
+  hline{Z} = {0.08em},
+}
 Parameter & Value & Description \\
-\midrule
 \texttt{nSenders} & 10 & Number of TCP senders \\
 \texttt{fastRate} & 1 Mbit/s & Sender $\to$ router link speed (delay 2~ms) \\
 \texttt{bottleneckRate} & 2 Mbit/s & Bottleneck link speed (router $\to$ receiver) \\
 \texttt{bottleneckDelay} & 10 ms & Bottleneck link delay \\
 \texttt{simTime} & 60.0 & Simulation duration (s) \\
 Transport & TCP BulkSend & Segment size 512 bytes \\
-\bottomrule
-\end{tabular}
+\end{tblr}
 \end{table}
 
 \subsection{AQM configuration}
@@ -345,22 +336,24 @@ All three algorithms are launched with identical threshold parameters (Table~\re
 \centering
 \caption{Unified threshold parameters for RED, ARED, and Gentle RED}
 \label{tab:aqm-config}
-\begin{tabular}{lll}
-\toprule
+\begin{tblr}{
+  colspec = {lll},
+  row{1} = {font=\bfseries},
+  hline{1,2} = {0.08em},
+  hline{Z} = {0.08em},
+}
 Parameter & Value & Description \\
-\midrule
 \texttt{minTh} & 5 packets & Lower average queue threshold---no drops below \\
 \texttt{maxTh} & 10 packets & Upper threshold; above it RED/ARED drop all packets \\
 \texttt{MaxSize} & 100 packets & Hard buffer limit \\
-\bottomrule
-\end{tabular}
+\end{tblr}
 \end{table}
 
 \subsection{Instrumentation}
 
 The discrete-event network simulator \textbf{ns-3} version~3.41 was used. Simulation scripts are placed in the \texttt{scratch/} directory. For this experiment, a subdirectory was created with the following structure:
 
-\begin{verbatim}
+\begin{minted}{text}
 ns-3.41/
 +-- scratch/
     +-- red-experiments/
@@ -372,23 +365,23 @@ ns-3.41/
         +-- analysis/
             +-- vis.py
             +-- ...
-\end{verbatim}
+\end{minted}
 
 Configuration files specify the AQM type and queue parameters. Example \texttt{configs/red.txt}:
 
-\begin{verbatim}
+\begin{minted}{text}
 aqmType=red
 minTh=5
 maxTh=10
 MaxSize=100
-\end{verbatim}
+\end{minted}
 
 Analogous files for ARED (\texttt{aqmType=ared}) and Gentle RED (\texttt{aqmType=gentle}) differ only in the \texttt{aqmType} field value.
 
 Simulations were launched with:
-\begin{verbatim}
+\begin{minted}{bash}
 ./ns3 run "scratch/red-experiments/red.cc --config=configs/<algorithm>.txt"
-\end{verbatim}
+\end{minted}
 
 Upon completion of each simulation, three CSV files were generated:
 \begin{itemize}
@@ -398,16 +391,16 @@ Upon completion of each simulation, three CSV files were generated:
 \end{itemize}
 
 For plotting, the script \texttt{vis.py} with moving average smoothing (window of 30~samples) was used:
-\begin{verbatim}
+\begin{minted}{bash}
 python vis.py --algorithms red ared gentle --window 30
-\end{verbatim}
+\end{minted}
 
 \subsection{Simulation script structure}
 
 To illustrate the experimental setup, Listings~\ref{lst:topology}--\ref{lst:tracing} present simplified pseudocode of the main simulation stages.
 
 \begin{figure}[H]
-\begin{minted}{cpp}
+\begin{minted}{c++}
 // 1. Create network nodes
 NodeContainer senders(10), router(1), receiver(1);
 
@@ -443,7 +436,7 @@ tch.Install(bottleneckDevice);
 \end{figure}
 
 \begin{figure}[H]
-\begin{minted}{cpp}
+\begin{minted}{c++}
 // 6. Install TCP BulkSend on each sender
 BulkSendHelper bulkSend("ns3::TcpSocketFactory",
     InetSocketAddress(receiverAddr, port));
@@ -468,7 +461,7 @@ senderApps.Stop(Seconds(60.0));
 \end{figure}
 
 \begin{figure}[H]
-\begin{minted}{cpp}
+\begin{minted}{c++}
 // 9. Queue length sampling (every 100 ms)
 void SampleQueue(Ptr<QueueDisc> qdisc, ofstream& out) {
     double t = Simulator::Now().GetSeconds();
@@ -516,10 +509,13 @@ Figure~\ref{lst:tracing} illustrates the instrumentation approach: ns-3's tracin
 \centering
 \caption{Algorithm evaluation metrics}
 \label{tab:metrics}
-\begin{tabular}{lll}
-\toprule
+\begin{tblr}{
+  colspec = {lll},
+  row{1} = {font=\bfseries},
+  hline{1,2} = {0.08em},
+  hline{Z} = {0.08em},
+}
 Metric & Data source & What it characterizes \\
-\midrule
 Mean and median queue length & \texttt{*\_queue.csv} & Average buffer delay \\
 p90 / p99 queue length & \texttt{*\_queue.csv} & Tail delays \\
 Fraction of time with empty queue & \texttt{*\_queue.csv} & Link underutilization \\
@@ -527,8 +523,7 @@ Mean throughput & \texttt{*\_throughput.csv} & Link utilization \\
 Coefficient of variation (CV) & \texttt{*\_throughput.csv} & Flow stability \\
 Total drop count & \texttt{*\_drops.csv} & Load on TCP congestion mechanism \\
 Median inter-drop interval & \texttt{*\_drops.csv} & Nature of control signals \\
-\bottomrule
-\end{tabular}
+\end{tblr}
 \end{table}
 
 \section{Results}
@@ -565,15 +560,17 @@ Steady-state queue statistics are presented in Table~\ref{tab:queue-stats}.
 \centering
 \caption{Queue length statistics in steady-state regime}
 \label{tab:queue-stats}
-\begin{tabular}{lcccccc}
-\toprule
+\begin{tblr}{
+  colspec = {lcccccc},
+  row{1} = {font=\bfseries},
+  hline{1,2} = {0.08em},
+  hline{Z} = {0.08em},
+}
 Algorithm & Mean (pkt) & Std.\ dev. & Median & p90 & p99 & Empty (\%) \\
-\midrule
 RED      & 7.74  & 7.45  & 6 & 18 & 26 & 13.4\% \\
 ARED     & 9.57  & 11.94 & 4 & 25 & 49 & 22.3\% \\
 Gentle   & 6.40  & 8.86  & 1 & 19 & 34 & 26.6\% \\
-\bottomrule
-\end{tabular}
+\end{tblr}
 \end{table}
 
 The time distribution across EWMA average $\bar{q}$ operating zones is shown in Table~\ref{tab:zones}.
@@ -582,15 +579,17 @@ The time distribution across EWMA average $\bar{q}$ operating zones is shown in 
 \centering
 \caption{Fraction of time in each queue management zone}
 \label{tab:zones}
-\begin{tabular}{lcccc}
-\toprule
-Algorithm & $\bar{q} < \mathrm{min}_{\mathrm{Th}}$ & $[\mathrm{min}_{\mathrm{Th}}, \mathrm{max}_{\mathrm{Th}})$ & $[\mathrm{max}_{\mathrm{Th}}, 2\mathrm{max}_{\mathrm{Th}})$ & $\bar{q} \ge 2\mathrm{max}_{\mathrm{Th}}$ \\
-\midrule
+\begin{tblr}{
+  colspec = {lcccc},
+  row{1} = {font=\bfseries},
+  hline{1,2} = {0.08em},
+  hline{Z} = {0.08em},
+}
+Algorithm & {$\bar{q} < \mathrm{min}_{\mathrm{Th}}$} & {$[\mathrm{min}_{\mathrm{Th}}, \mathrm{max}_{\mathrm{Th}})$} & {$[\mathrm{max}_{\mathrm{Th}}, 2\mathrm{max}_{\mathrm{Th}})$} & {$\bar{q} \ge 2\mathrm{max}_{\mathrm{Th}}$} \\
 RED      & 46.0\% & 19.8\% & 29.3\% & 4.8\%  \\
 ARED     & 52.6\% & 8.0\%  & 19.6\% & 19.7\% \\
 Gentle   & 60.8\% & 11.8\% & 19.8\% & 7.7\%  \\
-\bottomrule
-\end{tabular}
+\end{tblr}
 \end{table}
 
 RED spends 34.1\% of time in the forced drop zone (\texttt{m\_qAvg >= maxTh}), explaining its high average queue. ARED spends 19.7\% of time in the $\bar{q} \ge 2\cdot\mathrm{max}_{\mathrm{Th}}$ zone where all packets are dropped---hence its anomalously high p99. Gentle RED most frequently stays below minTh (60.8\%) and least frequently enters the hard drop zone (7.7\%).
@@ -614,18 +613,20 @@ The characteristic peak around $t = 33$~s (all curves reach $\sim$1.86~Mbit/s) r
 \centering
 \caption{Throughput statistics (CV---coefficient of variation)}
 \label{tab:throughput}
-\begin{tabular}{lccccc}
-\toprule
+\begin{tblr}{
+  colspec = {lccccc},
+  row{1} = {font=\bfseries},
+  hline{1,2} = {0.08em},
+  hline{Z} = {0.08em},
+}
 Algorithm & Mean (Mbit/s) & Std.\ dev. & Min. & Max. & CV \\
-\midrule
 RED      & 1.8047 & 0.3380 & 0.533 & 3.621 & 18.7\% \\
 ARED     & 1.8039 & 0.3950 & 0.553 & 3.293 & 21.9\% \\
 Gentle   & 1.7998 & 0.4444 & 0.352 & 3.654 & 24.7\% \\
-\bottomrule
-\end{tabular}
+\end{tblr}
 \end{table}
 
-Despite identical means, \textbf{RED demonstrates the lowest variability} (CV~$= 18.7\%$): hard synchronous drops keep all TCP flows in step, making throughput predictable. Gentle RED has the highest CV (24.7\%)---asynchronous window management creates more ``ripple,'' although the mean does not suffer.
+Despite identical means, \textbf{RED demonstrates the lowest variability} (CV~$= 18.7\%$)~\cite{jain1999}: hard synchronous drops keep all TCP flows in step, making throughput predictable. Gentle RED has the highest CV (24.7\%)---asynchronous window management creates more ``ripple,'' although the mean does not suffer.
 
 \subsection{Packet drops}
 
@@ -650,15 +651,17 @@ Drop statistics summary is presented in Table~\ref{tab:drops}.
 \centering
 \caption{Packet drop statistics}
 \label{tab:drops}
-\begin{tabular}{lccccc}
-\toprule
+\begin{tblr}{
+  colspec = {lccccc},
+  row{1} = {font=\bfseries},
+  hline{1,2} = {0.08em},
+  hline{Z} = {0.08em},
+}
 Algorithm & Total drops & Rate (drops/s) & Median interval & Active seconds & Max.\ burst \\
-\midrule
 RED      & 1240 & 21.34 & 2.3 ms  & 47 & 321 \\
 ARED     & 1003 & 17.11 & 11.3 ms & 33 & 276 \\
 Gentle   & 1026 & 17.75 & 9.1 ms  & 27 & 305 \\
-\bottomrule
-\end{tabular}
+\end{tblr}
 \end{table}
 
 RED generates \textbf{19--21\% more drops} than the competitors. The median inter-drop interval for RED (2.3~ms) is 4--5~times smaller than for ARED and Gentle---RED practically continuously drops packets during congestion periods, while ARED and Gentle operate in ``pulses.''
@@ -672,10 +675,13 @@ The final comparison of algorithms across all key metrics is presented in Table~
 \centering
 \caption{Summary comparison of RED, ARED, and Gentle RED algorithms}
 \label{tab:summary}
-\begin{tabular}{lccc}
-\toprule
+\begin{tblr}{
+  colspec = {lccc},
+  row{1} = {font=\bfseries},
+  hline{1,2} = {0.08em},
+  hline{Z} = {0.08em},
+}
 Metric & RED & ARED & Gentle RED \\
-\midrule
 Mean throughput & 1.8047 Mbit/s & 1.8039 Mbit/s & 1.7998 Mbit/s \\
 Throughput CV & \textbf{18.7\%} & 21.9\% & 24.7\% \\
 Mean queue & 7.74 pkt & 9.57 pkt & \textbf{6.40 pkt} \\
@@ -685,8 +691,7 @@ Empty queue (\%) & 13.4\% & 22.3\% & \textbf{26.6\%} \\
 Total drops & 1240 & \textbf{1003} & 1026 \\
 Drop pattern & continuous & clustered & pulsed \\
 Median inter-drop interval & 2.3 ms & 11.3 ms & 9.1 ms \\
-\bottomrule
-\end{tabular}
+\end{tblr}
 \end{table}
 
 \textbf{RED} provides the most predictable and stable throughput (CV~$= 18.7\%$) but achieves this at the cost of the highest number of drops (1240) and the highest average queue. The continuous nature of drops synchronizes TCP flows, creating rigid, ``quantized'' congestion management dynamics.
@@ -715,7 +720,31 @@ The obtained results confirm that AQM algorithm selection is determined by speci
 
 The simulation source code and analysis scripts are publicly available at: \url{https://github.com/fibersel/dcm-paper}.
 
+\begin{authorcontributions}
+The author confirms sole responsibility for the following: study conception and design, implementation of the simulation model, data collection, analysis and interpretation of results, and manuscript preparation.
+\end{authorcontributions}
+
+\begin{funding}
+This research received no external funding.
+\end{funding}
+
+\begin{dataavailability}
+The simulation data and analysis scripts generated during this study are available at: \url{https://github.com/fibersel/dcm-paper}.
+\end{dataavailability}
+
+\begin{conflictsofinterest}
+The author declares no conflict of interest.
+\end{conflictsofinterest}
+
+\noindent\footnotesize{\textbf{Declaration on Generative AI}:~}
+During the preparation of this work, the author used Claude (Anthropic) in order to: grammar and spelling check, text translation, and improve writing style. After using these tools, the author reviewed and edited the content as needed and takes full responsibility for the publication's content.
+\normalsize
+
 \printbibliography
+
+\section*{Information about the authors}
+
+\noindent\textbf{Palagashvili, Abuli Mikhailovich}---PhD student of Department of Applied Probability and Informatics of Peoples' Friendship University of Russia (RUDN University) (e-mail: 1042250185@rudn.ru, ORCID: 0009-0007-7009-7038)
 
 }% end \selectlanguage{english}
 

@@ -194,6 +194,75 @@
       \field{title}{Recommendations on Queue Management and Congestion Avoidance in the Internet}
       \field{year}{1998}
     \endentry
+    \entry{adams2012}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f2af507e066491c7c22b05e5fbd04234}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Rolf},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f2af507e066491c7c22b05e5fbd04234}
+      \strng{fullhash}{f2af507e066491c7c22b05e5fbd04234}
+      \strng{fullhashraw}{f2af507e066491c7c22b05e5fbd04234}
+      \strng{bibnamehash}{f2af507e066491c7c22b05e5fbd04234}
+      \strng{authorbibnamehash}{f2af507e066491c7c22b05e5fbd04234}
+      \strng{authornamehash}{f2af507e066491c7c22b05e5fbd04234}
+      \strng{authorfullhash}{f2af507e066491c7c22b05e5fbd04234}
+      \strng{authorfullhashraw}{f2af507e066491c7c22b05e5fbd04234}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Communications Surveys \& Tutorials}
+      \field{number}{3}
+      \field{title}{Active Queue Management: A Survey}
+      \field{volume}{15}
+      \field{year}{2013}
+      \field{pages}{1425\bibrangedash 1476}
+      \range{pages}{52}
+      \verb{doi}
+      \verb 10.1109/SURV.2012.082212.00018
+      \endverb
+    \endentry
+    \entry{kulyabov2018}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=2374bdcce3835058e1015db090a89477}{%
+           family={Korolkova},
+           familyi={K\bibinitperiod},
+           given={Anna\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=057dad34cfb50f63d58a3c092f0d96ff}{%
+           family={Kulyabov},
+           familyi={K\bibinitperiod},
+           given={Dmitry\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f80a5d07807e2ce9048efd6cf24b1e31}{%
+           family={Tchernyshev},
+           familyi={T\bibinitperiod},
+           given={Timofei\bibnamedelima I.},
+           giveni={T\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{7278642bff184222267f1a801ed0aa89}
+      \strng{fullhash}{7278642bff184222267f1a801ed0aa89}
+      \strng{fullhashraw}{7278642bff184222267f1a801ed0aa89}
+      \strng{bibnamehash}{7278642bff184222267f1a801ed0aa89}
+      \strng{authorbibnamehash}{7278642bff184222267f1a801ed0aa89}
+      \strng{authornamehash}{7278642bff184222267f1a801ed0aa89}
+      \strng{authorfullhash}{7278642bff184222267f1a801ed0aa89}
+      \strng{authorfullhashraw}{7278642bff184222267f1a801ed0aa89}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of Peoples' Friendship University of Russia. Series: Mathematics, Informatics, Physics}
+      \field{number}{3}
+      \field{title}{On the Classification of {RED} Algorithm Modifications}
+      \field{volume}{26}
+      \field{year}{2018}
+      \field{pages}{305\bibrangedash 316}
+      \range{pages}{12}
+    \endentry
     \entry{nichols2012}{article}{}{}
       \name{author}{2}{}{%
         {{hash=b7f8cd60f6e059c641e4f3379d92a2e7}{%
@@ -215,8 +284,8 @@
       \strng{authornamehash}{0d5eac32a5d08e8f9cb5cf6a01929104}
       \strng{authorfullhash}{0d5eac32a5d08e8f9cb5cf6a01929104}
       \strng{authorfullhashraw}{0d5eac32a5d08e8f9cb5cf6a01929104}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{ACM Queue}
@@ -276,8 +345,8 @@
       \strng{authornamehash}{d9249ceaf8719f252c767ef2360209a0}
       \strng{authorfullhash}{d9249ceaf8719f252c767ef2360209a0}
       \strng{authorfullhashraw}{d9249ceaf8719f252c767ef2360209a0}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of IEEE International Conference on High Performance Switching and Routing (HPSR)}
@@ -310,8 +379,8 @@
       \strng{authornamehash}{e797d8bbb855a3bef0488897f68c9d65}
       \strng{authorfullhash}{e797d8bbb855a3bef0488897f68c9d65}
       \strng{authorfullhashraw}{e797d8bbb855a3bef0488897f68c9d65}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE/ACM Transactions on Networking}
@@ -323,6 +392,37 @@
       \range{pages}{17}
       \verb{doi}
       \verb 10.1109/90.251892
+      \endverb
+    \endentry
+    \entry{jacobson1988}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=2191d887ae31ebf1ef43a77dc25834c4}{%
+           family={Jacobson},
+           familyi={J\bibinitperiod},
+           given={Van},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{2191d887ae31ebf1ef43a77dc25834c4}
+      \strng{fullhash}{2191d887ae31ebf1ef43a77dc25834c4}
+      \strng{fullhashraw}{2191d887ae31ebf1ef43a77dc25834c4}
+      \strng{bibnamehash}{2191d887ae31ebf1ef43a77dc25834c4}
+      \strng{authorbibnamehash}{2191d887ae31ebf1ef43a77dc25834c4}
+      \strng{authornamehash}{2191d887ae31ebf1ef43a77dc25834c4}
+      \strng{authorfullhash}{2191d887ae31ebf1ef43a77dc25834c4}
+      \strng{authorfullhashraw}{2191d887ae31ebf1ef43a77dc25834c4}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM SIGCOMM Computer Communication Review}
+      \field{number}{4}
+      \field{title}{Congestion Avoidance and Control}
+      \field{volume}{18}
+      \field{year}{1988}
+      \field{pages}{314\bibrangedash 329}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1145/52325.52356
       \endverb
     \endentry
     \entry{christiansen2001}{article}{}{}
@@ -356,8 +456,8 @@
       \strng{authornamehash}{ffc620bfefe9a2a129527e5319a6c2a7}
       \strng{authorfullhash}{ffc620bfefe9a2a129527e5319a6c2a7}
       \strng{authorfullhashraw}{ffc620bfefe9a2a129527e5319a6c2a7}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE/ACM Transactions on Networking}
@@ -400,8 +500,8 @@
       \strng{authornamehash}{d6f785e2c8738ab252b9377220242989}
       \strng{authorfullhash}{d6f785e2c8738ab252b9377220242989}
       \strng{authorfullhashraw}{d6f785e2c8738ab252b9377220242989}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Adaptive {RED}: An Algorithm for Increasing the Robustness of {RED}'s Active Queue Management}
@@ -424,8 +524,8 @@
       \strng{authornamehash}{bcb66fc187ba17e78c6c22747197aecf}
       \strng{authorfullhash}{bcb66fc187ba17e78c6c22747197aecf}
       \strng{authorfullhashraw}{bcb66fc187ba17e78c6c22747197aecf}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Recommendation on using the ``gentle'' variant of {RED}}
@@ -436,6 +536,43 @@
       \verb{url}
       \verb https://www.icir.org/floyd/red/gentle.html
       \endverb
+    \endentry
+    \entry{rfc3168}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=7c6c08c52f1ffd02fc65a88adbee1e4f}{%
+           family={Ramakrishnan},
+           familyi={R\bibinitperiod},
+           given={K.\bibnamedelimi K.},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=bcb66fc187ba17e78c6c22747197aecf}{%
+           family={Floyd},
+           familyi={F\bibinitperiod},
+           given={Sally},
+           giveni={S\bibinitperiod}}}%
+        {{hash=8b0febed05d760696749e60595d40833}{%
+           family={Black},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {IETF}%
+      }
+      \strng{namehash}{b5375e4c83033832d30d87974e175faf}
+      \strng{fullhash}{b5375e4c83033832d30d87974e175faf}
+      \strng{fullhashraw}{b5375e4c83033832d30d87974e175faf}
+      \strng{bibnamehash}{b5375e4c83033832d30d87974e175faf}
+      \strng{authorbibnamehash}{b5375e4c83033832d30d87974e175faf}
+      \strng{authornamehash}{b5375e4c83033832d30d87974e175faf}
+      \strng{authorfullhash}{b5375e4c83033832d30d87974e175faf}
+      \strng{authorfullhashraw}{b5375e4c83033832d30d87974e175faf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{RFC 3168}
+      \field{title}{The Addition of Explicit Congestion Notification ({ECN}) to {IP}}
+      \field{year}{2001}
     \endentry
     \entry{korolkova2010}{book}{}{}
       \name{author}{1}{}{%
@@ -538,6 +675,46 @@
       \field{type}{techreport}
       \field{year}{2002}
     \endentry
+    \entry{ott1999}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=fc2006e9ed7a870e51487792831144f0}{%
+           family={Ott},
+           familyi={O\bibinitperiod},
+           given={Teunis\bibnamedelima J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=d345f770815be8a581252293d5cd4d13}{%
+           family={Lakshman},
+           familyi={L\bibinitperiod},
+           given={T.\bibnamedelimi V.},
+           giveni={T\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=3667240462469591f67a67efb937bad1}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={Larry\bibnamedelima H.},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e76bf6b3d58c4e49cbb37af365da37c8}
+      \strng{fullhash}{e76bf6b3d58c4e49cbb37af365da37c8}
+      \strng{fullhashraw}{e76bf6b3d58c4e49cbb37af365da37c8}
+      \strng{bibnamehash}{e76bf6b3d58c4e49cbb37af365da37c8}
+      \strng{authorbibnamehash}{e76bf6b3d58c4e49cbb37af365da37c8}
+      \strng{authornamehash}{e76bf6b3d58c4e49cbb37af365da37c8}
+      \strng{authorfullhash}{e76bf6b3d58c4e49cbb37af365da37c8}
+      \strng{authorfullhashraw}{e76bf6b3d58c4e49cbb37af365da37c8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of IEEE INFOCOM}
+      \field{title}{{SRED}: Stabilized {RED}}
+      \field{volume}{3}
+      \field{year}{1999}
+      \field{pages}{1346\bibrangedash 1355}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/INFCOM.1999.752153
+      \endverb
+    \endentry
     \entry{hollot2001}{inproceedings}{}{}
       \name{author}{4}{}{%
         {{hash=41cd7add9c2d6fa87b9ce8d1772edc4f}{%
@@ -581,6 +758,174 @@
       \verb{doi}
       \verb 10.1109/INFCOM.2001.916670
       \endverb
+    \endentry
+    \entry{misra2000}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=40925a6fd0da79c354b086bcce01cd61}{%
+           family={Misra},
+           familyi={M\bibinitperiod},
+           given={Vishal},
+           giveni={V\bibinitperiod}}}%
+        {{hash=cb73de6f692658afadd2300c582c7dcc}{%
+           family={Gong},
+           familyi={G\bibinitperiod},
+           given={Wei-Bo},
+           giveni={W\bibinithyphendelim B\bibinitperiod}}}%
+        {{hash=1d2c1f6da31d33c4edb21c7e2d0fc18e}{%
+           family={Towsley},
+           familyi={T\bibinitperiod},
+           given={Donald},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{b1e8d052ce17295ae20e7bd500ec97d0}
+      \strng{fullhash}{b1e8d052ce17295ae20e7bd500ec97d0}
+      \strng{fullhashraw}{b1e8d052ce17295ae20e7bd500ec97d0}
+      \strng{bibnamehash}{b1e8d052ce17295ae20e7bd500ec97d0}
+      \strng{authorbibnamehash}{b1e8d052ce17295ae20e7bd500ec97d0}
+      \strng{authornamehash}{b1e8d052ce17295ae20e7bd500ec97d0}
+      \strng{authorfullhash}{b1e8d052ce17295ae20e7bd500ec97d0}
+      \strng{authorfullhashraw}{b1e8d052ce17295ae20e7bd500ec97d0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ACM SIGCOMM Computer Communication Review}
+      \field{number}{4}
+      \field{title}{Fluid-based Analysis of a Network of {AQM} Routers Supporting {TCP} Flows with an Application to {RED}}
+      \field{volume}{30}
+      \field{year}{2000}
+      \field{pages}{151\bibrangedash 160}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/347059.347421
+      \endverb
+    \endentry
+    \entry{ns3}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=51564b9578a91ed0d7cea1dc3abdbbb2}{%
+           family={{The ns-3 Project}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{51564b9578a91ed0d7cea1dc3abdbbb2}
+      \strng{fullhash}{51564b9578a91ed0d7cea1dc3abdbbb2}
+      \strng{fullhashraw}{51564b9578a91ed0d7cea1dc3abdbbb2}
+      \strng{bibnamehash}{51564b9578a91ed0d7cea1dc3abdbbb2}
+      \strng{authorbibnamehash}{51564b9578a91ed0d7cea1dc3abdbbb2}
+      \strng{authornamehash}{51564b9578a91ed0d7cea1dc3abdbbb2}
+      \strng{authorfullhash}{51564b9578a91ed0d7cea1dc3abdbbb2}
+      \strng{authorfullhashraw}{51564b9578a91ed0d7cea1dc3abdbbb2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version 3.41}
+      \field{title}{ns-3: A Discrete-Event Network Simulator}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.nsnam.org/
+      \endverb
+      \verb{url}
+      \verb https://www.nsnam.org/
+      \endverb
+    \endentry
+    \entry{omnetpp}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=194a81e86659bbe18fb9090908d00604}{%
+           family={Varga},
+           familyi={V\bibinitperiod},
+           given={András},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1015a4951e749f06452f7b5b688b81ce}{%
+           family={Hornig},
+           familyi={H\bibinitperiod},
+           given={Rudolf},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{de24021e4c3f94621acd35cb960fcad1}
+      \strng{fullhash}{de24021e4c3f94621acd35cb960fcad1}
+      \strng{fullhashraw}{de24021e4c3f94621acd35cb960fcad1}
+      \strng{bibnamehash}{de24021e4c3f94621acd35cb960fcad1}
+      \strng{authorbibnamehash}{de24021e4c3f94621acd35cb960fcad1}
+      \strng{authornamehash}{de24021e4c3f94621acd35cb960fcad1}
+      \strng{authorfullhash}{de24021e4c3f94621acd35cb960fcad1}
+      \strng{authorfullhashraw}{de24021e4c3f94621acd35cb960fcad1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 1st International Conference on Simulation Tools and Techniques (SIMUTools)}
+      \field{title}{An Overview of the {OMNeT++} Simulation Environment}
+      \field{year}{2008}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.4108/ICST.SIMUTOOLS2008.3027
+      \endverb
+    \endentry
+    \entry{ha2008}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=0679c4327ff18f6a4b434542e7d6b889}{%
+           family={Ha},
+           familyi={H\bibinitperiod},
+           given={Sangtae},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c2efba424e6284520d54279efcc92414}{%
+           family={Rhee},
+           familyi={R\bibinitperiod},
+           given={Injong},
+           giveni={I\bibinitperiod}}}%
+        {{hash=fad32cccb1bee56c02ce5156c010ddd4}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Lisong},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{4cb93d7182862b66779f94fbf8291117}
+      \strng{fullhash}{4cb93d7182862b66779f94fbf8291117}
+      \strng{fullhashraw}{4cb93d7182862b66779f94fbf8291117}
+      \strng{bibnamehash}{4cb93d7182862b66779f94fbf8291117}
+      \strng{authorbibnamehash}{4cb93d7182862b66779f94fbf8291117}
+      \strng{authornamehash}{4cb93d7182862b66779f94fbf8291117}
+      \strng{authorfullhash}{4cb93d7182862b66779f94fbf8291117}
+      \strng{authorfullhashraw}{4cb93d7182862b66779f94fbf8291117}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ACM SIGOPS Operating Systems Review}
+      \field{number}{5}
+      \field{title}{{CUBIC}: A New {TCP}-Friendly High-Speed {TCP} Variant}
+      \field{volume}{42}
+      \field{year}{2008}
+      \field{pages}{64\bibrangedash 74}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1145/1400097.1400105
+      \endverb
+    \endentry
+    \entry{jain1999}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=3322df3ccf4f2b377db993bd64be33aa}{%
+           family={Jain},
+           familyi={J\bibinitperiod},
+           given={Raj},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{3322df3ccf4f2b377db993bd64be33aa}
+      \strng{fullhash}{3322df3ccf4f2b377db993bd64be33aa}
+      \strng{fullhashraw}{3322df3ccf4f2b377db993bd64be33aa}
+      \strng{bibnamehash}{3322df3ccf4f2b377db993bd64be33aa}
+      \strng{authorbibnamehash}{3322df3ccf4f2b377db993bd64be33aa}
+      \strng{authornamehash}{3322df3ccf4f2b377db993bd64be33aa}
+      \strng{authorfullhash}{3322df3ccf4f2b377db993bd64be33aa}
+      \strng{authorfullhashraw}{3322df3ccf4f2b377db993bd64be33aa}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE 802.11-98/S41}
+      \field{title}{Throughput Fairness Index}
+      \field{year}{1999}
     \endentry
   \enddatalist
 \endrefsection
