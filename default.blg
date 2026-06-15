@@ -1,15 +1,15 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'default.blg'
-[24] biber-darwin:342> INFO - === вс июн 14, 2026, 21:14:33
-[31] Biber.pm:421> INFO - Reading 'default.bcf'
-[56] Biber.pm:1002> INFO - Found 23 citekeys in bib section 0
-[61] Biber.pm:4487> INFO - Processing section 0
-[64] Biber.pm:4678> INFO - Looking for bibtex file 'cite.bib' for section 0
-[65] bibtex.pm:1713> INFO - LaTeX decoding ...
-[71] bibtex.pm:1519> INFO - Found BibTeX data source 'cite.bib'
-[132] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[132] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[132] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[132] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
-[139] bbl.pm:676> INFO - Writing 'default.bbl' with encoding 'UTF-8'
-[143] bbl.pm:779> INFO - Output to default.bbl
+[23] biber-darwin:342> INFO - === пн июн 15, 2026, 12:33:20
+[29] Biber.pm:421> INFO - Reading 'default.bcf'
+[54] Biber.pm:1002> INFO - Found 23 citekeys in bib section 0
+[59] Biber.pm:4487> INFO - Processing section 0
+[62] Biber.pm:4678> INFO - Looking for bibtex file 'cite.bib' for section 0
+[63] bibtex.pm:1713> INFO - LaTeX decoding ...
+[70] bibtex.pm:1519> INFO - Found BibTeX data source 'cite.bib'
+[129] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[129] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[129] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[129] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[137] bbl.pm:676> INFO - Writing 'default.bbl' with encoding 'UTF-8'
+[141] bbl.pm:779> INFO - Output to default.bbl

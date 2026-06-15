@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.3.6)  14 JUN 2026 21:14
+This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)  (format=lualatex 2026.3.6)  15 JUN 2026 12:33
  system commands enabled.
 **default
 (./default.tex
@@ -2926,13 +2926,13 @@ LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
 \openout3 = pfu1.aux
  00000000false
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/n' will be
-(Font)              scaled to size 8.62001pt on input line 48.
+(Font)              scaled to size 8.62001pt on input line 50.
 LaTeX Font Info:    Font shape `TU/TeXGyreHeros(0)/m/n' will be
-(Font)              scaled to size 7.40273pt on input line 48.
+(Font)              scaled to size 7.40273pt on input line 50.
 LaTeX Font Info:    Font shape `TU/TeXGyreHeros(0)/b/n' will be
-(Font)              scaled to size 7.18341pt on input line 48.
+(Font)              scaled to size 7.18341pt on input line 50.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/n' will be
-(Font)              scaled to size 8.41429pt on input line 48.
+(Font)              scaled to size 8.41429pt on input line 50.
 
 Package fontspec Info: 
 (fontspec)             TeX Gyre Termes scale = 0.9577773784132948.
@@ -3013,7 +3013,7 @@ g;"
 g;+smcp;"
 
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(1)/m/n' will be
-(Font)              scaled to size 9.57779pt on input line 53.
+(Font)              scaled to size 9.57779pt on input line 55.
 
 Package fontspec Info: 
 (fontspec)             TeX Gyre Termes scale = 0.9577773784132948.
@@ -3027,7 +3027,7 @@ Package fontspec Info:
 (fontspec)             TeX Gyre Termes scale = 0.9577773784132948.
 
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(1)/m/n' will be
-(Font)              scaled to size 8.62001pt on input line 71.
+(Font)              scaled to size 8.62001pt on input line 73.
 
 Package fontspec Info: 
 (fontspec)             TeX Gyre Heros scale = 0.8225153606476225.
@@ -3053,7 +3053,7 @@ Package fontspec Info:
 (fontspec)             TeX Gyre Heros scale = 0.8225153606476225.
 
 LaTeX Font Info:    Font shape `TU/TeXGyreHeros(0)/m/n' will be
-(Font)              scaled to size 8.22525pt on input line 71.
+(Font)              scaled to size 8.22525pt on input line 73.
 
 Package fontspec Info: 
 (fontspec)             TeX Gyre Heros/B scale = 0.7981450898884165.
@@ -3145,11 +3145,11 @@ mcp;"
 ;+smcp;"
 
 LaTeX Font Info:    Font shape `TU/TeXGyreHeros(1)/m/n' will be
-(Font)              scaled to size 7.40259pt on input line 71.
+(Font)              scaled to size 7.40259pt on input line 73.
 LaTeX Font Info:    Font shape `TU/TeXGyreHeros(1)/b/n' will be
-(Font)              scaled to size 7.18327pt on input line 71.
+(Font)              scaled to size 7.18327pt on input line 73.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(1)/b/n' will be
-(Font)              scaled to size 8.41429pt on input line 71.
+(Font)              scaled to size 8.41429pt on input line 73.
 
 Missing character: There is no А (U+0410) in font "name:TeX Gyre Heros/B:mode=n
 ode;script=cyrl;language=dflt;+liga;+tlig;"!
@@ -8578,168 +8578,168 @@ de;script=cyrl;language=dflt;+liga;+tlig;"!
 <doclicense-CC-by-nc-88x31.pdf, id=8, 90.3375pt x 31.61812pt>
 File: doclicense-CC-by-nc-88x31.pdf Graphic file (type pdf)
 <use doclicense-CC-by-nc-88x31.pdf>
-Package luatex.def Info: doclicense-CC-by-nc-88x31.pdf  used on input line 78.
+Package luatex.def Info: doclicense-CC-by-nc-88x31.pdf  used on input line 80.
 (luatex.def)             Requested size: 45.97339pt x 16.09076pt.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(1)/m/n' will be
-(Font)              scaled to size 7.66223pt on input line 78.
+(Font)              scaled to size 7.66223pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(1)/m/n' will be
-(Font)              scaled to size 5.74667pt on input line 78.
+(Font)              scaled to size 5.74667pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(1)/m/n' will be
-(Font)              scaled to size 4.7889pt on input line 78.
+(Font)              scaled to size 4.7889pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
-(Font)              scaled to size 7.66223pt on input line 78.
+(Font)              scaled to size 7.66223pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
-(Font)              scaled to size 5.74667pt on input line 78.
+(Font)              scaled to size 5.74667pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
-(Font)              scaled to size 4.7889pt on input line 78.
+(Font)              scaled to size 4.7889pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
-(Font)              scaled to size 7.66223pt on input line 78.
+(Font)              scaled to size 7.66223pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
-(Font)              scaled to size 5.74667pt on input line 78.
+(Font)              scaled to size 5.74667pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
-(Font)              scaled to size 4.7889pt on input line 78.
+(Font)              scaled to size 4.7889pt on input line 80.
 99999-1
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 78.
+(hyperref)                removing `\\' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 78.
+(hyperref)                removing `\<let>-command' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 78.
+(hyperref)                removing `\\' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@centercr' on input line 78.
+(hyperref)                removing `\@centercr' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@rightskip' on input line 78.
+(hyperref)                removing `\@rightskip' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@flushglue' on input line 78.
+(hyperref)                removing `\@flushglue' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\rightskip' on input line 78.
+(hyperref)                removing `\rightskip' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@rightskip' on input line 78.
+(hyperref)                removing `\@rightskip' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\finalhyphendemerits' on input line 78.
+(hyperref)                removing `\finalhyphendemerits' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 78.
+(hyperref)                removing `\z@' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leftskip' on input line 78.
+(hyperref)                removing `\leftskip' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@skip' on input line 78.
+(hyperref)                removing `\z@skip' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\parindent' on input line 78.
+(hyperref)                removing `\parindent' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\z@' on input line 78.
+(hyperref)                removing `\z@' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 78.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 1.59663pt
-(hyperref)                removed on input line 78.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\unhbox' on input line 78.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\voidb@x' on input line 78.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 78.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 1.59663pt
-(hyperref)                removed on input line 78.
+(hyperref)                removed on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\unskip' on input line 78.
+(hyperref)                removing `\unhbox' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\<let>-command' on input line 78.
+(hyperref)                removing `\voidb@x' on input line 80.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 78.
+(hyperref)                removing `\leavevmode@ifvmode' on input line 80.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 1.59663pt
+(hyperref)                removed on input line 80.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\unskip' on input line 80.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 80.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 80.
 
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/it' will be
-(Font)              scaled to size 9.9768pt on input line 78.
+(Font)              scaled to size 9.9768pt on input line 80.
 
-LaTeX Warning: Reference `1:endtitle' on page 1 undefined on input line 78.
+LaTeX Warning: Reference `1:endtitle' on page 1 undefined on input line 80.
 
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/n' will be
-(Font)              scaled to size 7.47937pt on input line 78.
+(Font)              scaled to size 7.47937pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/n' will be
-(Font)              scaled to size 13.792pt on input line 78.
+(Font)              scaled to size 13.792pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreHeros(0)/m/n' will be
-(Font)              scaled to size 11.84435pt on input line 78.
+(Font)              scaled to size 11.84435pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreHeros(0)/b/n' will be
-(Font)              scaled to size 11.49344pt on input line 78.
+(Font)              scaled to size 11.49344pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/n' will be
-(Font)              scaled to size 7.08755pt on input line 78.
+(Font)              scaled to size 7.08755pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/n' will be
-(Font)              scaled to size 5.26778pt on input line 78.
+(Font)              scaled to size 5.26778pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/it' will be
-(Font)              scaled to size 8.97913pt on input line 78.
+(Font)              scaled to size 8.97913pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(1)/m/n' will be
-(Font)              scaled to size 8.62001pt on input line 78.
+(Font)              scaled to size 8.62001pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/n' will be
-(Font)              scaled to size 5.74667pt on input line 78.
+(Font)              scaled to size 5.74667pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/n' will be
-(Font)              scaled to size 4.7889pt on input line 78.
+(Font)              scaled to size 4.7889pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(2)/m/n' will be
-(Font)              scaled to size 8.62001pt on input line 78.
+(Font)              scaled to size 8.62001pt on input line 80.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesMath(3)/m/n' will be
-(Font)              scaled to size 8.62001pt on input line 78.
+(Font)              scaled to size 8.62001pt on input line 80.
 1-col
 1-col
 1-col
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/n' will be
-(Font)              scaled to size 11.49335pt on input line 80.
+(Font)              scaled to size 11.49335pt on input line 82.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/n' will be
-(Font)              scaled to size 11.21906pt on input line 80.
+(Font)              scaled to size 11.21906pt on input line 82.
 LaTeX Font Info:    Font shape `TU/TeXGyreHeros(0)/b/n' will be
-(Font)              scaled to size 9.57788pt on input line 80.
+(Font)              scaled to size 9.57788pt on input line 82.
 <image/logo.pdf, id=21, 465.74pt x 395.4775pt>
 File: image/logo.pdf Graphic file (type pdf)
 <use image/logo.pdf>
-Package luatex.def Info: image/logo.pdf  used on input line 87.
+Package luatex.def Info: image/logo.pdf  used on input line 89.
 (luatex.def)             Requested size: 39.83629pt x 33.82332pt.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/it' will be
-(Font)              scaled to size 7.6792pt on input line 87.
+(Font)              scaled to size 7.6792pt on input line 89.
 
-LaTeX Warning: Reference `1:endtitle' on page 1 undefined on input line 87.
+LaTeX Warning: Reference `1:endtitle' on page 1 undefined on input line 89.
 
 
 Package fancyhdr Warning: \headheight is too small (27.0pt): 
@@ -8758,14 +8758,14 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 <./image/logo.pdf></usr/local/texlive/2026/texmf-dist/tex/latex/doclicense/image
 s/doclicense-CC-by-nc-88x31.pdf>]
 LaTeX Font Info:    Font shape `TU/TeXGyreHeros(0)/b/n' will be
-(Font)              scaled to size 7.98157pt on input line 87.
+(Font)              scaled to size 7.98157pt on input line 89.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/n' will be
-(Font)              scaled to size 9.34921pt on input line 105.
+(Font)              scaled to size 9.34921pt on input line 107.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/m/it' will be
-(Font)              scaled to size 7.98145pt on input line 106.
+(Font)              scaled to size 7.98145pt on input line 108.
 
 
-LaTeX Warning: Reference `1:endtitle' on page 2 undefined on input line 106.
+LaTeX Warning: Reference `1:endtitle' on page 2 undefined on input line 108.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -8780,7 +8780,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 [3]
 
-LaTeX Warning: Reference `1:endtitle' on page 4 undefined on input line 184.
+LaTeX Warning: Reference `1:endtitle' on page 4 undefined on input line 186.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -8789,9 +8789,9 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 [4]
 LaTeX Font Info:    Font shape `TU/TeXGyreCursor(0)/m/n' will be
-(Font)              scaled to size 10.3357pt on input line 199.
+(Font)              scaled to size 10.3357pt on input line 201.
 
-Underfull \hbox (badness 2197) in paragraph at lines 200--201
+Underfull \hbox (badness 2197) in paragraph at lines 202--203
 []\TU/TeXGyreCursor(0)/m/n/10 traffic-control\TU/TeXGyreTermes(0)/m/n/10 ---queu
 e dis-ci-plines in-clud-ing \TU/TeXGyreCursor(0)/m/n/10 RedQueueDisc \TU/TeXGyr
 eTermes(0)/m/n/10 (RED, ARED, Gen-
@@ -8806,7 +8806,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 \g__cctab_tmpix_cctab=\catcodetable20
 
 
-LaTeX Warning: Reference `1:endtitle' on page 6 undefined on input line 243.
+LaTeX Warning: Reference `1:endtitle' on page 6 undefined on input line 245.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -8817,10 +8817,10 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 \pydata@fh@0=\write8
 
 \openout8 = _C21F969B5F03D33D43E04F8F136E7682.data.minted
-runsystem(latexminted config  --timestamp 20260614211439 C21F969B5F03D33D43E04F8
+runsystem(latexminted config  --timestamp 20260615123326 C21F969B5F03D33D43E04F8
 F136E7682)...executed.
  (./_C21F969B5F03D33D43E04F8F136E7682.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260614211439 C21F969B5F03D33D43
+runsystem(latexminted cleanconfig  --timestamp 20260615123326 C21F969B5F03D33D43
 E04F8F136E7682)...executed.
 
 (./_minted/default.style.minted)
@@ -8836,7 +8836,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 [7]) (./_minted/E5FFB564A6FD3A47942EAF5BCBA37973.highlight.minted)
 
-LaTeX Warning: Reference `1:endtitle' on page 8 undefined on input line 349.
+LaTeX Warning: Reference `1:endtitle' on page 8 undefined on input line 351.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -8866,7 +8866,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Warning: Reference `1:endtitle' on page 10 undefined on input line 460.
+LaTeX Warning: Reference `1:endtitle' on page 10 undefined on input line 462.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -8883,7 +8883,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [11]
-Overfull \hbox (10.54074pt too wide) in paragraph at lines 524--525
+Overfull \hbox (10.54074pt too wide) in paragraph at lines 526--527
  [][] 
  []
 
@@ -8892,7 +8892,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Warning: Reference `1:endtitle' on page 12 undefined on input line 526.
+LaTeX Warning: Reference `1:endtitle' on page 12 undefined on input line 528.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -8913,7 +8913,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-LaTeX Warning: Reference `1:endtitle' on page 14 undefined on input line 573.
+LaTeX Warning: Reference `1:endtitle' on page 14 undefined on input line 575.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -8930,11 +8930,11 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{3.60004pt}.
 
 [15] (./image/drops.pgf)
-Underfull \vbox (badness 1990) has occurred while \output is active []
+Underfull \vbox (badness 1997) has occurred while \output is active []
 
 
 
-LaTeX Warning: Reference `1:endtitle' on page 16 undefined on input line 638.
+LaTeX Warning: Reference `1:endtitle' on page 16 undefined on input line 640.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -8952,7 +8952,7 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 [17]
 
-LaTeX Warning: Reference `1:endtitle' on page 18 undefined on input line 706.
+LaTeX Warning: Reference `1:endtitle' on page 18 undefined on input line 708.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -8961,9 +8961,9 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 
 [18]
 LaTeX Font Info:    Font shape `TU/TeXGyreHeros(0)/m/n' will be
-(Font)              scaled to size 6.5802pt on input line 723.
+(Font)              scaled to size 6.5802pt on input line 725.
 LaTeX Font Info:    Font shape `TU/TeXGyreHeros(0)/b/n' will be
-(Font)              scaled to size 6.38525pt on input line 723.
+(Font)              scaled to size 6.38525pt on input line 725.
 
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -8986,7 +8986,7 @@ Class scrbook Warning: Redefinition of \@makeschapterhead detected.
 (scrbook)              that will remove this deprecated code.
 
 LaTeX Font Info:    Font shape `TU/TeXGyreTermes(0)/b/n' will be
-(Font)              scaled to size 13.46286pt on input line 741.
+(Font)              scaled to size 13.46286pt on input line 743.
 
 Package fancyhdr Warning: \footskip is too small (0.0pt): 
 (fancyhdr)                Make it at least 3.60004pt, for example:
@@ -9044,15 +9044,15 @@ Package logreq Info: Writing requests to 'default.run.xml'.
 
 Here is how much of LuaTeX's memory you used:
  52236 strings out of 476076
- 381505,3417909 words of node,token memory allocated
+ 305203,4101490 words of node,token memory allocated
  29305 words of node memory still in use:
    18 hlist, 3 vlist, 2 rule, 357 disc, 1 local_par, 219 glue, 21 kern, 16 penal
 ty, 3257 glyph, 36 attribute, 85 glue_spec, 36 attribute_list, 3 write, 6 pdf_ac
 tion nodes
-   avail lists: 1:10,2:44477,3:43130,4:634,5:1007,6:162,7:12738,8:52,9:2177,10:3
-2,11:988
+   avail lists: 1:9,2:23709,3:27994,4:634,5:1007,6:162,7:12738,8:52,9:2177,10:32
+,11:988
  73220 multiletter control sequences out of 65536+600000
- 178 fonts using 45226747 bytes
+ 178 fonts using 45226615 bytes
  136i,17n,141p,11220b,6391s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/opentype/public/tex-gyre/texgyrecursor
 -bold.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/tex-gyre/tex
@@ -9067,7 +9067,7 @@ yretermes-italic.otf></usr/local/texlive/2026/texmf-dist/fonts/opentype/public/t
 ex-gyre/texgyretermes-regular.otf></usr/local/texlive/2026/texmf-dist/fonts/open
 type/public/tex-gyre/texgyretermes-bolditalic.otf></usr/local/texlive/2026/texmf
 -dist/fonts/opentype/public/tex-gyre/texgyretermes-bold.otf>
-Output written on default.pdf (22 pages, 707284 bytes).
+Output written on default.pdf (22 pages, 651410 bytes).
 
 PDF statistics: 399 PDF objects out of 1000 (max. 8388607)
  315 compressed objects within 4 object streams

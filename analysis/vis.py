@@ -19,10 +19,6 @@ matplotlib.rcParams.update({
     "figure.figsize": (6.2, 3.5),
 })
 
-LINE_STYLES = ["-", "--", ":", "-."]
-MARKERS = ["o", "s", "^", "D"]
-GRAY_COLORS = ["0.0", "0.4", "0.65"]
-
 
 def load_data(prefix):
     return {
@@ -60,13 +56,11 @@ def main():
     # ------------------------
     fig_queue, ax_queue = plt.subplots()
 
-    for i, (algo, d) in enumerate(data.items()):
+    for algo, d in data.items():
         q = d["queue"]
         q["smooth"] = smooth(q, "queue", args.window)
 
-        ax_queue.plot(q["time"], q["smooth"], label=algo.upper(),
-                      color=GRAY_COLORS[i % len(GRAY_COLORS)],
-                      linestyle=LINE_STYLES[i % len(LINE_STYLES)])
+        ax_queue.plot(q["time"], q["smooth"], label=algo.upper())
 
     ax_queue.set_xlabel("Time (s)")
     ax_queue.set_ylabel("Queue size (packets)")
@@ -80,13 +74,11 @@ def main():
     # ------------------------
     fig_throughput, ax_throughput = plt.subplots()
 
-    for i, (algo, d) in enumerate(data.items()):
+    for algo, d in data.items():
         t = d["throughput"]
         t["smooth"] = smooth(t, "mbps", args.window)
 
-        ax_throughput.plot(t["time"], t["smooth"], label=algo.upper(),
-                          color=GRAY_COLORS[i % len(GRAY_COLORS)],
-                          linestyle=LINE_STYLES[i % len(LINE_STYLES)])
+        ax_throughput.plot(t["time"], t["smooth"], label=algo.upper())
 
     ax_throughput.set_xlabel("Time (s)")
     ax_throughput.set_ylabel("Throughput (Mbps)")
@@ -100,12 +92,10 @@ def main():
     # ------------------------
     fig_drops, ax_drops = plt.subplots()
 
-    for i, (algo, d) in enumerate(data.items()):
+    for algo, d in data.items():
         dr = d["drops"]
 
-        ax_drops.scatter(dr["time"], [algo]*len(dr), s=5, label=algo.upper(),
-                         color=GRAY_COLORS[i % len(GRAY_COLORS)],
-                         marker=MARKERS[i % len(MARKERS)])
+        ax_drops.scatter(dr["time"], [algo]*len(dr), s=5, label=algo.upper())
 
     ax_drops.set_xlabel("Time (s)")
     ax_drops.set_ylabel("Algorithm")
